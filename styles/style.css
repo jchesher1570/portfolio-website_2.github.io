@@ -384,7 +384,7 @@ Primary use: Portfolio Template
     padding-right: 2rem;
     padding-left: 1.5rem;
   }
-  body #hero h3 {
+  body #hero h2 {
     padding-right: 4rem;
   }
   .row .experience .experience-item .experience-img-layer {
@@ -613,7 +613,7 @@ Primary use: Portfolio Template
   body #bio-container {
     padding: 0 1rem;
   }
-  .body-top .technologies h3 {
+  .body-top .technologies h2 {
     font-size: 1.25rem;
   }
   .body-top .technologies {
@@ -629,7 +629,7 @@ Primary use: Portfolio Template
 }
 
 @media only screen and (max-width: 380px) {
-  body #hero h3{
+  body #hero h2{
     font-size: 1.625rem;
     padding-top: 0.25rem;
     padding-right: 7.25rem;
@@ -947,7 +947,7 @@ nav ul li a:hover {
   padding-top: 22.875rem;
 }
 
-#hero h3 {
+#hero h2 {
   text-align: center;
   color: var(--button-text);
   padding-right: 23.5rem;
@@ -1014,7 +1014,7 @@ nav ul li a:hover {
   padding: 0 4rem;
 }
 
-#bio-container h2 {
+#bio-container h3 {
   font-family: 'PPNeueMontreal-Medium'; 
   margin-left: 1rem;
 }
