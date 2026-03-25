@@ -394,7 +394,7 @@ Primary use: Portfolio Template
     width: 70%;
   }
   #footer-container #contact-title h2 {
-    padding-top: 0;
+    padding-left: 20px;
   }
 }
 
@@ -624,7 +624,7 @@ Primary use: Portfolio Template
     width: 19rem;
   }
   #footer-container #contact-title h2 {
-    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -651,7 +651,7 @@ Primary use: Portfolio Template
     padding: 0 1rem;
   }
   #footer-container #contact-title h2 {
-    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -1016,7 +1016,7 @@ nav ul li a:hover {
 
 #bio-container h2 {
   font-family: 'PPNeueMontreal-Medium'; 
-  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .body-top {
@@ -1331,7 +1331,7 @@ article li {
 
 #contact-title h2 {
   padding-top: 2rem;
-  padding-right: 4rem;
+  padding-left: 10rem;
 }
 
 .profile-img {
