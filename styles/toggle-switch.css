@@ -1,0 +1,46 @@
+
+
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'PPNeueMontreal-Medium';
+  font-weight: 700;
+  font-size: .875rem;
+  cursor: pointer;
+}
+
+.toggle-switch-border {
+  display: inline-flex;
+  align-items: center;
+  width: 50px;
+  height: 29px;
+  border: 1px solid var(--primary); 
+  border-radius: 18px;
+  box-sizing: border-box;
+  margin-inline-start: 8px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch-dot {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  border-radius: 50%;
+  background: var(--primary);
+  transform: translate3d(3px, 0, 0);
+  transition: transform .1s ease-in-out;
+}
+
+.toggle-switch input:checked + * .toggle-switch-dot {
+  transform: translate3d(23px, 0, 0);
+}
+
+.fa-moon {
+  color: var(--primary);
+  
+}
+
+.fa-sun {color: var(--primary);}
