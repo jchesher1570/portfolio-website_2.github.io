@@ -346,11 +346,11 @@ Primary use: Portfolio Template
   .row .experience .experience-item .experience-text-layer {
     font-size: 1rem;
   }
-  .row .experience .experience-item .experience-text-layer h2 {
+  .row .experience .experience-item .experience-text-layer h3 {
     font-size: 1.5rem;
   }
-  .row .experience .experience-item .experience-text-layer h3 {
-    font-size: 1.25rem;
+  .row .experience .experience-item .experience-text-layer h4 {
+    font-size: 2.25rem;
   }
   .int-row .interests {
     flex-direction: column;
@@ -411,7 +411,7 @@ Primary use: Portfolio Template
   .about-me #bio-title {
     margin-bottom: 1.5rem;
   }
-  .body-top .technologies h3 {
+  .body-top .technologies h4 {
     font-size: 1.75rem;
   }
   .technologies .devicon-board {
@@ -428,7 +428,7 @@ Primary use: Portfolio Template
     max-width: 28rem;
     height: 702px;
   }
-  .portfolio .portfolio-card h3 {
+  .portfolio .portfolio-card h4 {
     font-size: 1.5rem;
   }
   body .portfolio-card .info-layer .date-info{
@@ -613,7 +613,7 @@ Primary use: Portfolio Template
   body #bio-container {
     padding: 0 1rem;
   }
-  .body-top .technologies h2 {
+  .body-top .technologies h3 {
     font-size: 1.25rem;
   }
   .body-top .technologies {
@@ -1116,7 +1116,7 @@ nav ul li a:hover {
   filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.5));
 }
 
-.portfolio-card h3 {
+.portfolio-card h4 {
   font-weight: var(--fw-bold);
   font-size: 2rem;
   padding: 1.25rem 0 0.5rem 0;
@@ -1197,7 +1197,7 @@ nav ul li a:hover {
   border: 1px solid var(--button-text);
 }
 
-article h3 {
+article h4 {
   margin-block-start: 0;
 }
 
@@ -1244,14 +1244,14 @@ article li {
   font-size: 1.125rem;
 }
 
-.experience-text-layer h3 {
+.experience-text-layer h4 {
   font-weight: var(--fw-bold);
   padding-bottom: 3%;
   font-size: 2.375rem;
   font-family: "PPNeueMontreal-Book";
 }
 
-.experience-text-layer h4 {
+.experience-text-layer h5 {
   font-size: 1.25rem;
   font-weight: var(--fw-bold);
   padding-bottom: 3%;
@@ -1329,7 +1329,7 @@ article li {
   
 }
 
-#contact-title h2 {
+#contact-title h3 {
   padding-top: 2rem;
   padding-left: 10rem;
 }
