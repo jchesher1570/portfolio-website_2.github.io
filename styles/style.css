@@ -278,7 +278,6 @@ Primary use: Portfolio Template
     height: 3.75rem;
   }
   header .container {
-    flex-direction: row;
     transition: var(--default-transition) 0.5s height ease-in-out;
   }
   header nav {
@@ -821,7 +820,13 @@ section {
 }
 
 header {
-  height: 3.75rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
 }
 
 header.sticky {
@@ -870,9 +875,13 @@ nav {
 
 nav ul {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding-right: 1rem;
   padding-top: 1rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  list-style: none;
 }
 
 nav ul li {
