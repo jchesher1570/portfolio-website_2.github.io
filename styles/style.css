@@ -278,7 +278,7 @@ Primary use: Portfolio Template
     height: 3.75rem;
   }
   header .container {
-    flex-direction: column;
+    flex-direction: row;
     transition: var(--default-transition) 0.5s height ease-in-out;
   }
   header nav {
@@ -375,7 +375,6 @@ Primary use: Portfolio Template
   body #bio-container{
     padding: 0 2rem;
   }
-
 }
 
 @media only screen and (max-width: 650px) {
