@@ -283,7 +283,7 @@ Primary use: Portfolio Template
   }
   header nav {
     height: 0;
-    width: 100%;
+    width: 20%;
     overflow: hidden;
     transition: 250ms height ease-in-out;
   }
