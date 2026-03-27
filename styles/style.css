@@ -277,9 +277,6 @@ Primary use: Portfolio Template
   .nav-logo {
     height: 3.75rem;
   }
-  header .container {
-    transition: var(--default-transition) 0.5s height ease-in-out;
-  }
   header nav {
     height: 0;
     width: 20%;
@@ -845,12 +842,14 @@ header.sticky nav ul {
   transition: var(--default-transition);
 }
 
-header .container {
+/* header .container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
+  transition: var(--default-transition) 0.5s height ease-in-out;
 }
+*/
 
 #logo {
   margin-left: 0.375rem;
