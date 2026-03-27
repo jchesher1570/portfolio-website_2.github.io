@@ -288,7 +288,7 @@ Primary use: Portfolio Template
     transition: 250ms height ease-in-out;
   }
   header nav ul {
-    flex-direction: column;
+    flex-direction: row;
   }
   body header.sticky nav ul {
     padding: 0 1rem;
