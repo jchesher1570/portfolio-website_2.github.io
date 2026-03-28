@@ -2,7 +2,7 @@
 [Master Stylesheet]
 
 Project: Portfolio
-Last change: 09 February 2024
+Last change: 28 March 2026
 Primary use: Portfolio Template  
 -------------------------------------------------------------------*/
 
@@ -19,11 +19,6 @@ Primary use: Portfolio Template
 8. Header & Nav Bar
     8.1. Change Background on Mouse-Hover.
 9. Hero
-10. About Me Styles.
-11. Recent Work.
-12. Experience.
-13. Interests.
-14. Footer.
 
 -------------------------------------------------------------------*/
 
@@ -187,22 +182,10 @@ Primary use: Portfolio Template
   --hover: var(--light-hover);
 }
 
-/* ================================================= */
-/* Define styles for different screen sizes */
-/* ================================================= */
-
-@media only screen and (max-width: 1536px) {
-  body #hero {
-    height: 40rem;
-  }
-  body #hero h1 {
-    padding-top: 17rem;
-  }
-}
-
 /* ============================================================== */
 /* Hamburger and Cross for Navbar at Smaller Screen Sizes */
 /* ============================================================== */
+
 .nav-toggle {
   display: none;
   cursor: pointer;
@@ -216,6 +199,19 @@ Primary use: Portfolio Template
 }
 .hidden {
   display: none;
+}
+
+/* ================================================= */
+/* Define styles for different screen sizes */
+/* ================================================= */
+
+@media only screen and (max-width: 1536px) {
+  body #hero {
+    height: 40rem;
+  }
+  body #hero h1 {
+    padding-top: 17rem;
+  }
 }
 
 @media all and (max-width: 830px) {
@@ -284,7 +280,6 @@ Primary use: Portfolio Template
   .navIcon line {
     stroke: var(--primary-text);;
   }
-
 }
 
 @media only screen and (max-width: 650px) {
