@@ -198,57 +198,6 @@ Primary use: Portfolio Template
   body #hero h1 {
     padding-top: 17rem;
   }
-  #hero .arrows-body {
-    padding-top: 9rem;
-  }
-}
-
-@media only screen and (max-width: 1496px) {
-  #bio-container .body-top .about-me-text {
-    margin-right: 0;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1365px) {
-  .body-top .technologies {
-    margin: 0 ;
-    padding-top: 1.5rem;
-  }
-  #work-container .portfolio {
-    justify-content: left;
-  }
-  .row .experience {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .row .experience .experience-item {
-    flex-direction: row;
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  body .bio {
-    flex-direction: column;
-    height: auto;
-  }
-  body .about-me {
-    padding-top: 3%;
-    width: 90%
-  }
-  .body-top .about-me-text {
-    width: 100%;
-  }
-  #work-container .portfolio {
-    justify-content: center;
-  }
-  .row .experience .experience-item .experience-img-layer {
-    width: 25%;
-  }
-  .row .experience .experience-item .experience-text-layer {
-    width: 75%;
-  }
 }
 
 .nav-toggle {
