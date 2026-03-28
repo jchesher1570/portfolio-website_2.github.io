@@ -811,7 +811,6 @@ h6 {
 /* Header & Nav Bar */
 /* ================================================= */
 
-nav,
 section {
   border-block-end: none;
 }
@@ -843,13 +842,13 @@ header.sticky nav ul {
   transition: var(--default-transition);
 }
 
-#nav-container {
+/* #nav-container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
   transition: var(--default-transition) 0.5s height ease-in-out;
-}
+} */
 
 #logo {
   margin-left: 0.175rem;
