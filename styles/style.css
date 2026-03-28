@@ -685,49 +685,12 @@ body::before {
   opacity: 0.3;
 }
 
-.container {
-  padding: 0 2rem;
-}
-
-.section-caption {
-  font-family: 'PPNeueMontreal-Thin'; 
-  font-size: 1rem;
-  font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  color: var(--primary-text);
-}
-
-.caption-line {
-  margin-bottom: 5rem;
-}
-
-#about, #recent-work, #experience, #interest {
-  padding-block-start: 1rem;
-}
-
-.caption-line {
-  color: var(--primary-text) ;
-  margin-top: 1rem;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .hs-title {
   font-family: 'PPNeueMontreal-Medium';
   margin-bottom: 4rem;
   margin-top: 0;
   font-weight: var(--fw-reg);
   letter-spacing: normal;
-}
-
-.subheading-row {
-  flex: 0 0 auto;
-  width: 83%;
 }
 
 :focus {
@@ -841,14 +804,6 @@ header.sticky nav ul {
   padding: 0.75rem 0.75rem;
   transition: var(--default-transition);
 }
-
-/* #nav-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 0;
-  transition: var(--default-transition) 0.5s height ease-in-out;
-} */
 
 #logo {
   margin-left: 0.175rem;
