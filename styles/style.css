@@ -964,54 +964,6 @@ nav ul li a:hover {
   padding-right: 23.5rem;
 }
 
-.arrows-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 16.75rem;
-}
-
-.arrow {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-top: 6px solid var(--primary-text);
-  border-left: 6px solid var(--primary-text);
-  transform: rotate(-135deg);
-  animation: arrow-load 2.5s infinite;
-}
-
-.arrow:nth-child(1) {
-  top: 30px;
-  animation-delay: -0.4s;
-}
-
-.arrow:nth-child(2) {
-  animation-delay: -0.2s;
-}
-
-.arrow:nth-child(3) {
-  bottom: 30px;
-}
-
-@keyframes arrow-load {
-  0%
-  {
-    opacity: 0;
-    transform: rotate(-135deg) translate(48px, 48px)
-  }
-  0%
-  {
-    opacity: 1;
-  }
-  100%
-  {
-    opacity: 0;
-    transform: rotate(-135deg) translate(-48px, -48px)
-  }
-}
-
 /* ================================================= */
 /* About Me Styles */
 /* ================================================= */
