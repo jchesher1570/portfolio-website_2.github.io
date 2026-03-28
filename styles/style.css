@@ -200,21 +200,6 @@ Primary use: Portfolio Template
   }
 }
 
-.nav-toggle {
-  display: none;
-  cursor: pointer;
-}
-.nav-btn {
-  display: none;
-}
-.open {
-  height: 21rem;
-  z-index: 2;
-}
-.hidden {
-  display: none;
-}
-
 @media all and (max-width: 830px) {
   #sidemenu {
     padding-top: 0.25rem;
