@@ -9,4 +9,4 @@ if (localS == 'dark') {
   document.documentElement.setAttribute('data-theme', 'dark')
 }
 // Set the correct theme
-document.documentElement.setAttribute('data-theme', 'light')
+document.documentElement.setAttribute('data-theme', 'dark')
