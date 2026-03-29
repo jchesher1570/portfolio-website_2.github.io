@@ -465,7 +465,7 @@ header.sticky nav ul {
 }
 
 #logo {
-  margin-left: 1.75rem;
+  margin-left: 25px;
   margin-top: 1.5rem;
   cursor: pointer;
 }
@@ -504,8 +504,8 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  text-align: left;
-  padding: 15px 15px 15px 25px;
+  text-align: center;
+  padding: 15px;
   color: white;
   text-decoration: none;
   transition: background 0.3s;
