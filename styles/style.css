@@ -517,6 +517,10 @@ nav ul li a:hover {
   color: var(--button-text);
 }
 
+#theme-item {
+    padding-left: 54px;
+}
+
 #theme-switcher {
   background-color: var(--switch-bg);
   border-radius: 2.375rem;
