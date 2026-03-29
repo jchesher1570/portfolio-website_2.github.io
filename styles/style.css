@@ -498,7 +498,6 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-inline-start: 2rem;
   font-family: "PPNeueMontreal-Medium";
   font-size: 1.1rem;
   font-weight: --fw-bold;
