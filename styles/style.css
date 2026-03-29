@@ -517,7 +517,7 @@ nav ul li a:hover {
   color: var(--button-text);
 }
 
-#theme-item {
+#theme__item {
     padding-left: 54px;
 }
 
