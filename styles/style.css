@@ -519,6 +519,7 @@ nav ul li a:hover {
 
 #theme_item {
     padding-left: 54px;
+    width: 4rem;
 }
 
 #theme-switcher {
