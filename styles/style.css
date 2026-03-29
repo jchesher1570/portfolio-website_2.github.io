@@ -537,7 +537,7 @@ nav ul li a:hover {
 #theme-switcher::before {
   content: '';
   position: absolute;
-  width: 1.675rem;
+  width: 0.675rem;
   height: 1.675rem;
   background-color: var(--switch-circle-bg);
   border-radius: 37.5px;
