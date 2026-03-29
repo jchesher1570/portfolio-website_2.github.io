@@ -466,6 +466,7 @@ header.sticky nav ul {
 
 #logo {
   margin: 25px 0px 0px 25px;
+  margin-top: auto;
   cursor: pointer;
 }
 
@@ -480,7 +481,7 @@ header.sticky nav ul {
 }
 
 nav {
-    flex-grow: 1; /* Makes the nav container take up all remaining space */
+    flex: 1; /* Makes the nav container take up all remaining space */
     justify-content: space-between;
     transition: var(--default-transition);
 }
