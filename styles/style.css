@@ -532,7 +532,8 @@ nav ul li a:hover {
   cursor: pointer;
   padding: 0.5rem;
   position: fixed;
-  right: 200px;
+  top: 60px;
+  right: 220px;
   z-index: 1000;
   transform: var(--default-border-radius);
 }
