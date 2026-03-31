@@ -533,7 +533,7 @@ nav ul li a:hover {
   padding: 0.5rem;
   position: fixed;
   top: 60px;
-  right: 220px;
+  right: 280px;
   z-index: 1000;
   transform: var(--default-border-radius);
 }
