@@ -531,7 +531,9 @@ nav ul li a:hover {
   gap: 0.95rem;
   cursor: pointer;
   padding: 0.5rem;
-  position: relative;
+  position: fixed;
+  right: 200px;
+  z-index: 1000;
   transform: var(--default-border-radius);
 }
 
