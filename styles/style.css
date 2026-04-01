@@ -517,9 +517,41 @@ nav ul li a:hover {
   color: var(--button-text);
 }
 
+/* ================================================= */
+/* Theme Switcher */
+/* ================================================= */
+
 #theme_item {
-    padding-left: 54px;
-    width: 8rem;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: var(--toggle-bg);
+  border: none;
+  border-radius: 30px;
+  padding: 8px 12px;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Icons */
+.icon {
+  pointer-events: none;
+}
+
+/* Show only one icon depending on theme */
+body.dark .sun {
+  display: none;
+}
+
+body:not(.dark) .moon {
+  display: none;
 }
 
 #theme-switcher {
