@@ -540,6 +540,27 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
+/* Knob */
+.knob {
+  fill: var(--knob);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ON state (dark mode) */
+body.dark .track {
+  fill: var(--track-on);
+}
+
+/* Move knob to the right */
+body.dark .knob {
+  transform: translateX(30px);
+}
+
+/* Press animation */
+#theme-switch:active .knob {
+  transform: scale(0.9);
+}
+
 /* Icons */
 .icon {
   pointer-events: none;

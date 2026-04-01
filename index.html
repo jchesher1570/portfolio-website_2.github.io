@@ -185,10 +185,15 @@
             <a href="#contact" class="nav_link">Contact</a>
           </li>
           <li class="nav_item" id="theme_item">
-            <div id="theme-switcher">
-              <input type="checkbox" id="toggle">
-              <label for="toggle" class="switch"></label>
-            </div>
+            <button id="theme-switch" aria-label="Toggle theme">
+              <svg class="toggle-svg" viewBox="0 0 60 30">
+                <!-- Track -->
+                <rect class="track" x="0" y="0" width="60" height="30" rx="15"/>
+                
+                <!-- Knob -->
+                <circle class="knob" cx="15" cy="15" r="12"/>
+              </svg>
+            </button>
           </li>
         </ul>
       </nav>

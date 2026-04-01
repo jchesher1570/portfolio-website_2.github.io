@@ -24,20 +24,33 @@
 
 const toggleBtn = document.getElementById("theme-toggle");
 
-// 1. Load saved theme OR system preference
+// Apply theme
+function applyTheme(theme) {
+  document.body.classList.toggle("dark", theme === "dark");
+}
+
+// 1. Initial load
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme) {
-  document.body.classList.toggle("dark", savedTheme === "dark");
+  applyTheme(savedTheme);
 } else {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  document.body.classList.toggle("dark", prefersDark);
+  applyTheme(prefersDark ? "dark" : "light");
 }
 
-// 2. Toggle on click
+// 2. Toggle click
 toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
   const isDark = document.body.classList.contains("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  const newTheme = isDark ? "light" : "dark";
+
+  applyTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+// 3. 🔄 Sync across tabs
+window.addEventListener("storage", (event) => {
+  if (event.key === "theme") {
+    applyTheme(event.newValue);
+  }
 });
