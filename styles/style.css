@@ -521,25 +521,6 @@ nav ul li a:hover {
 /* Theme Switcher */
 /* ================================================= */
 
-#theme_item {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-
-  background: var(--toggle-bg);
-  border: none;
-  border-radius: 30px;
-  padding: 8px 12px;
-
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  font-size: 16px;
-  transition: 0.3s;
-}
-
 /* Knob */
 .knob {
   fill: var(--knob);
