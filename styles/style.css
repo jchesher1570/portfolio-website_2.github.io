@@ -147,7 +147,7 @@ Primary use: Portfolio Template
 }
 
 :root[data-theme="dark"] {
-  --page-bg: #3c3a47;
+  --page-bg: #1a1826;
 
   --primary-text: #ffffff;
   --muted-text: #77757e;
@@ -168,7 +168,7 @@ Primary use: Portfolio Template
   --icon-sun: var(--muted-text);
   --icon-moon: #dce3ff;
 
-  --nav-bg: #3c3a47;
+  --nav-bg: #1a1826;
   --mob-nav-bg: #f5f5f6;
   --mob-nav-text: #2d2c35;
   --mob-nav-border: rgba(45, 44, 53, 0.04);
