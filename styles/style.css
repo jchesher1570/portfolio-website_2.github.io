@@ -265,10 +265,6 @@ Primary use: Portfolio Template
     color: var(--mob-nav-text);
     line-height: 2.7;
   }
-  ul li #theme-switcher {
-    margin: 0.5rem 0 0 0.625rem;
-    width: 4.25rem;
-  }
   .nav-toggle {
     display: block;
     position: absolute;
@@ -521,58 +517,6 @@ nav ul li a:hover {
 /* Theme Switcher */
 /* ================================================= */
 
-#theme_item {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-
-  background: var(--toggle-bg);
-  border: none;
-  border-radius: 30px;
-  padding: 8px 12px;
-
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  transition: 0.3s;
-}
-
-/* Knob */
-.knob {
-  fill: var(--knob);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ON state (dark mode) */
-body.dark .track {
-  fill: var(--track-on);
-}
-
-/* Move knob to the right */
-body.dark .knob {
-  transform: translateX(30px);
-}
-
-/* Press animation */
-#theme-switch:active .knob {
-  transform: scale(0.9);
-}
-
-/* Icons */
-.icon {
-  pointer-events: none;
-}
-
-/* Show only one icon depending on theme */
-body.dark .sun {
-  display: none;
-}
-
-body:not(.dark) .moon {
-  display: none;
-}
-
 #theme-switcher {
   background-color: var(--switch-bg);
   border-radius: 2.375rem;
@@ -582,9 +526,6 @@ body:not(.dark) .moon {
   gap: 0.95rem;
   cursor: pointer;
   padding: 0.5rem;
-  top: 70px;
-  right: 380px;
-  z-index: 1000;
   transform: var(--default-border-radius);
 }
 
@@ -606,12 +547,46 @@ body:not(.dark) .moon {
   transition: var(--default-transition);
 }
 
+/* Icons */
+.icon {
+  pointer-events: none;
+}
+
+/* Show only one icon depending on theme */
+body.dark .sun {
+  display: none;
+}
+
+body:not(.dark) .moon {
+  display: none;
+}
 #icon-sun {
   fill: var(--icon-sun);
 }
 
 #icon-moon {
   fill: var(--icon-moon);
+}
+
+/* Knob */
+.knob {
+  fill: var(--knob);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ON state (dark mode) */
+body.dark .track {
+  fill: var(--track-on);
+}
+
+/* Move knob to the right */
+body.dark .knob {
+  transform: translateX(30px);
+}
+
+/* Press animation */
+#theme-switch:active .knob {
+  transform: scale(0.9);
 }
 
 /* ================================================= */
