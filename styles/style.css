@@ -582,7 +582,6 @@ body:not(.dark) .moon {
   gap: 0.95rem;
   cursor: pointer;
   padding: 0.5rem;
-  position: fixed;
   top: 70px;
   right: 380px;
   z-index: 1000;
