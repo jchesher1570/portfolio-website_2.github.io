@@ -528,12 +528,13 @@ nav ul li a:hover {
   gap: 0.95rem;
   cursor: pointer;
   padding: 0.5rem;
+  position: relative;
   transform: var(--default-border-radius);
 }
 
 #theme-switcher::before {
   content: '';
-  margin-left: auto;
+  position: absolute;
   width: 1.675rem;
   height: 1.675rem;
   background-color: var(--switch-circle-bg);
