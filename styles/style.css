@@ -543,64 +543,53 @@ nav ul li a:hover {
   left: 1px;
   transform: translateX(var(--switch-circle-pos));
   transition: var(--default-transition);
-  margin-left: auto;
 }
 
 #theme-switcher svg {
   z-index: 2;
   transition: var(--default-transition);
-  margin-left: auto;
 }
 
 /* Icons */
 .icon {
   pointer-events: none;
-  margin-left: auto;
 }
 
 /* Show only one icon depending on theme */
 body.dark .sun {
   display: none;
-  margin-left: auto;
 }
 
 body:not(.dark) .moon {
   display: none;
-  margin-left: auto;
 }
 #icon-sun {
   fill: var(--icon-sun);
-  margin-left: auto;
 }
 
 #icon-moon {
   fill: var(--icon-moon);
-  margin-left: auto;
 }
 
 /* Knob */
 .knob {
   fill: var(--knob);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: auto;
 }
 
 /* ON state (dark mode) */
 body.dark .track {
   fill: var(--track-on);
-  margin-left: auto;
 }
 
 /* Move knob to the right */
 body.dark .knob {
   transform: translateX(30px);
-  margin-left: auto;
 }
 
 /* Press animation */
 #theme-switch:active .knob {
   transform: scale(0.9);
-  margin-left: auto;
 }
 
 /* ================================================= */
