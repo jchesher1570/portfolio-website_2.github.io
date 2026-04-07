@@ -588,11 +588,13 @@ body.dark .track {
 /* Move knob to the right */
 body.dark .knob {
   transform: translateX(30px);
+  margin-left: auto;
 }
 
 /* Press animation */
 #theme-switch:active .knob {
   transform: scale(0.9);
+  margin-left: auto;
 }
 
 /* ================================================= */
