@@ -555,22 +555,27 @@ nav ul li a:hover {
 /* Icons */
 .icon {
   pointer-events: none;
+  margin-left: auto;
 }
 
 /* Show only one icon depending on theme */
 body.dark .sun {
   display: none;
+  margin-left: auto;
 }
 
 body:not(.dark) .moon {
   display: none;
+  margin-left: auto;
 }
 #icon-sun {
   fill: var(--icon-sun);
+  margin-left: auto;
 }
 
 #icon-moon {
   fill: var(--icon-moon);
+  margin-left: auto;
 }
 
 /* Knob */
