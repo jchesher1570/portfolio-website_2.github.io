@@ -543,11 +543,13 @@ nav ul li a:hover {
   left: 1px;
   transform: translateX(var(--switch-circle-pos));
   transition: var(--default-transition);
+  margin-left: auto;
 }
 
 #theme-switcher svg {
   z-index: 2;
   transition: var(--default-transition);
+  margin-left: auto;
 }
 
 /* Icons */
@@ -575,6 +577,7 @@ body:not(.dark) .moon {
 .knob {
   fill: var(--knob);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
 }
 
 /* ON state (dark mode) */
