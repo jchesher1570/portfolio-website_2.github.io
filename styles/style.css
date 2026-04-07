@@ -521,6 +521,7 @@ nav ul li a:hover {
   background-color: var(--switch-bg);
   border-radius: 2.375rem;
   height: 2rem;
+  width: 6rem;
   display: flex;
   align-items: center;
   gap: 0.95rem;
