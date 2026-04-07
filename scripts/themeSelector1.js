@@ -1,4 +1,4 @@
-Switch function
+// Switch function
 const switchTheme = () => {
     // Get root element and data-theme value
     const rootElem = document.documentElement
@@ -21,35 +21,3 @@ if (window.matchMedia('(max-width: 830px)').matches) {
 }
 
 
-// const toggleBtn = document.getElementById("theme-toggle");
-// 
-// // Apply theme
-// function applyTheme(theme) {
-//   document.body.classList.toggle("dark", theme === "dark");
-// }
-// 
-// // 1. Initial load
-// const savedTheme = localStorage.getItem("theme");
-// 
-// if (savedTheme) {
-//   applyTheme(savedTheme);
-// } else {
-//   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-//   applyTheme(prefersDark ? "dark" : "light");
-// }
-// 
-// // 2. Toggle click
-// toggleBtn.addEventListener("click", () => {
-//   const isDark = document.body.classList.contains("dark");
-//   const newTheme = isDark ? "light" : "dark";
-// 
-//   applyTheme(newTheme);
-//   localStorage.setItem("theme", newTheme);
-// });
-// 
-// // 3. 🔄 Sync across tabs
-// window.addEventListener("storage", (event) => {
-//   if (event.key === "theme") {
-//     applyTheme(event.newValue);
-//   }
-// });
