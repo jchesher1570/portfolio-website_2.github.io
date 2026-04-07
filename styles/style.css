@@ -542,6 +542,7 @@ nav ul li a:hover {
   left: 1px;
   transform: translateX(var(--switch-circle-pos));
   transition: var(--default-transition);
+  margin-left: auto;
 }
 
 #theme-switcher svg {
