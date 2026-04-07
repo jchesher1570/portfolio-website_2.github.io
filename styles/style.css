@@ -540,7 +540,7 @@ nav ul li a:hover {
   background-color: var(--switch-circle-bg);
   border-radius: 37.5px;
   z-index: 0;
-  left: 1px;
+  right: 1px;
   transform: translateX(var(--switch-circle-pos));
   transition: var(--default-transition);
 }
