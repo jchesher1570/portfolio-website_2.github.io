@@ -522,7 +522,7 @@ nav ul li a:hover {
   border-radius: 2.375rem;
   height: 2rem;
   width: 6rem;
-  right: 40rem;
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 0.95rem;
