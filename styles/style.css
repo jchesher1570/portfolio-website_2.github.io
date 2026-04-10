@@ -606,15 +606,15 @@ body.dark .knob {
   text-align: left;
   font-family: "PPNeueMontreal-Medium";
   font-weight: --fw-bold;
-  padding-top: 10.875rem;
-  margin-left: 15rem;
+  padding-top: 6rem;
+  margin-left: 17.5rem;
 }
 
 #hero h2 {
   text-align: left;
   color: var(--button-text);
   padding-right: 12.5rem;
-  margin-left: 15rem;
+  margin-left: 17.5rem;
 }
 
 /* ================================================= */
