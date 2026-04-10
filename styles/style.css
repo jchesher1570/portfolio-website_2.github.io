@@ -387,16 +387,6 @@ body::before {
 /* Typography */
 /* ================================================= */
 
-h1,
-h2,
-h3, 
-h4 {
-  font-family: "PPNeueMontreal-Bold";
-  font-weight: --fw-bold;
-  line-height: 1;
-  margin: 0;
-}
-
 h1 {
   font-size: var(--fs-h1);
 }
