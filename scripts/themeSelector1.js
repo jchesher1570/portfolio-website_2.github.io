@@ -9,8 +9,6 @@ const switchTheme = () => {
    // Set new HTML attribute
    rootElem.setAttribute('data-theme', newTheme)
  
-   // Set new local storage item
-   // localStorage.setItem('theme', newTheme)
 }
  
 // Add event listenr for the theme switcher

@@ -607,7 +607,7 @@ body.dark .knob {
   font-family: "PPNeueMontreal-Thin";
   width: min-content;
   word-wrap: break-word; /* Ensures long words don't overflow */
-  padding-top: 6rem;
+  padding-top: 5.5rem;
   margin-left: 17.5rem;
 }
 
