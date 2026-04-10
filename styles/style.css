@@ -527,7 +527,7 @@ nav ul li a:hover {
   align-items: center;
   gap: 0.95rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 4.5rem;
   position: relative;
   transform: var(--default-border-radius);
 }
