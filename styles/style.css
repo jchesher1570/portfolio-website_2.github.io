@@ -97,7 +97,7 @@ Primary use: Portfolio Template
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --fs-h1: 4.25rem;
+  --fs-h1: 8.5rem;
   --fs-h2: 2rem;
   --fs-h3: 1.75rem;
   --fs-h4: 1.5rem;
@@ -604,7 +604,7 @@ body.dark .knob {
 
 #hero h1 {
   text-align: left;
-  font-family: "PPNeueMontreal-Medium";
+  font-family: "PPNeueMontreal-Bold";
   font-weight: --fw-bold;
   padding-top: 6rem;
   margin-left: 17.5rem;
@@ -612,6 +612,7 @@ body.dark .knob {
 
 #hero h2 {
   text-align: left;
+  font-family: "PPNeueMontreal-Thin";
   color: var(--button-text);
   padding-right: 12.5rem;
   margin-left: 17.5rem;
