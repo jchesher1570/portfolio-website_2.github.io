@@ -522,8 +522,8 @@ nav ul li a:hover {
   border-radius: 2.375rem;
   height: 2rem;
   width: 4.175rem;
-  margin-left: auto;
   margin: 1rem;
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 0.95rem;
