@@ -599,7 +599,7 @@ body.dark .knob {
 /* ================================================= */
 
 #hero {
-  height: 32rem;
+  height: 22rem;
 }
 
 #hero h1 {
@@ -607,12 +607,14 @@ body.dark .knob {
   font-family: "PPNeueMontreal-Medium";
   font-weight: --fw-bold;
   padding-top: 22.875rem;
+  margin-left: 15rem;
 }
 
 #hero h2 {
   text-align: left;
   color: var(--button-text);
   padding-right: 12.5rem;
+  margin-left: 15rem;
 }
 
 /* ================================================= */
