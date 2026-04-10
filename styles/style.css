@@ -523,11 +523,12 @@ nav ul li a:hover {
   height: 2rem;
   width: 4.175rem;
   margin-left: auto;
+  margin: 1rem;
   display: flex;
   align-items: center;
   gap: 0.95rem;
   cursor: pointer;
-  padding: 4.5rem;
+  padding: 0.5rem;
   position: relative;
   transform: var(--default-border-radius);
 }
