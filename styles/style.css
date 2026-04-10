@@ -605,7 +605,6 @@ body.dark .knob {
 #hero h1 {
   text-align: left;
   font-family: "PPNeueMontreal-Thin";
-  font-weight: --fw-bold;
   width: min-content;
   word-wrap: break-word; /* Ensures long words don't overflow */
   padding-top: 6rem;
@@ -614,7 +613,7 @@ body.dark .knob {
 
 #hero h2 {
   text-align: left;
-  font-family: "PPNeueMontreal-Book";
+  font-family: "PPNeueMontreal-Thin";
   color: var(--button-text);
   padding-right: 12.5rem;
   margin-left: 17.5rem;
