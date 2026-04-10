@@ -10,14 +10,10 @@ const switchTheme = () => {
    rootElem.setAttribute('data-theme', newTheme)
  
    // Set new local storage item
-    localStorage.setItem('theme', newTheme)
+   // localStorage.setItem('theme', newTheme)
 }
  
-if (window.matchMedia('(max-width: 830px)').matches) {
-  // Add event listener for the theme colour switcher
-   document.querySelector('#theme-switcher').addEventListener('click', switchTheme)
-} else {
-    document.querySelector('#theme__item').addEventListener('click', switchTheme)
-}
+// Add event listenr for the theme switcher
+document.querySelector('#theme-switcher').addEventListener('click',switchTheme)
 
 
