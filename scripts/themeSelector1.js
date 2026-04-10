@@ -4,7 +4,7 @@ const switchTheme = () => {
     const rootElem = document.documentElement
     let dataTheme = rootElem.getAttribute('data-theme'),
         newTheme
-    newTheme = (dataTheme == 'dark') ? 'dark' : 'light'
+    newTheme = (dataTheme == 'dark') ? 'light' : 'dark'
  
    // Set new HTML attribute
    rootElem.setAttribute('data-theme', newTheme)
