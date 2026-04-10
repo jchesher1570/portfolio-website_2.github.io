@@ -615,8 +615,8 @@ body.dark .knob {
   text-align: left;
   font-family: "PPNeueMontreal-Thin";
   color: var(--button-text);
-  padding-right: 12rem;
-  margin-left: 17.5rem;
+  padding-right: 12.5rem;
+  margin-left: 18rem;
 }
 
 /* ================================================= */
