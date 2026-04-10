@@ -614,7 +614,6 @@ body.dark .knob {
 #hero h2 {
   text-align: left;
   font-family: "PPNeueMontreal-Thin";
-  color: var(--button-text);
   padding-right: 12.5rem;
   margin-left: 18rem;
 }
