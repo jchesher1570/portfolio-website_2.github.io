@@ -478,7 +478,6 @@ header.sticky nav ul {
 
 nav {
     flex: 1; /* Makes the nav container take up all remaining space */
-    text-align: center;
     justify-content: space-between;
     transition: var(--default-transition);
 }
@@ -489,7 +488,7 @@ nav ul {
   height: 100%; /* Ensures the list fills the nav container */
   justify-content: space-around; /* Spreads buttons evenly across the height */
   list-style: none;
-  padding: 0;
+  padding-top: 10rem;
 }
 
 nav ul li {
