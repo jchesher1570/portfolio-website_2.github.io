@@ -489,7 +489,7 @@ nav ul {
   justify-content: space-around; /* Spreads buttons evenly across the height */
   list-style: none;
   padding-top: 1rem;
-  margin-right: 6rem;
+  padding-right: 6rem;
 }
 
 nav ul li {
