@@ -505,12 +505,12 @@ nav ul li a:hover {
 }
 
 /* ================================================= */
-/* Header & Nav Bar */
+/* Logo */
 /* ================================================= */
 
 #logo {
-  margin: 25px 0px 0px 25px;
   margin-top: auto;
+  padding: 10rem;
 }
 
 #logo-link:hover #logo #text111, #logo-link:hover #logo #rect515, #navClosed:hover, #navOpen:hover {
