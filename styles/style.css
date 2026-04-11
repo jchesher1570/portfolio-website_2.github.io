@@ -466,6 +466,7 @@ nav {
 
 #sidemenu {
     margin-top: 5rem;
+    font-size: 2rem;
 }
 
 nav ul {
@@ -511,7 +512,7 @@ nav ul li a:hover {
 /* ================================================= */
 
 #logo {
-  margin-top: 22.25rem;
+  margin-top: 21.5rem;
   margin-left: 1rem;
   padding: 0.5rem;
 }
