@@ -435,6 +435,7 @@ section {
 }
 
 header {
+    position: fixed;
     height: 100%;
     width: 10%;
     display: flex;
