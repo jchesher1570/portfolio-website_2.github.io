@@ -488,13 +488,13 @@ nav ul {
   height: 100%; /* Ensures the list fills the nav container */
   justify-content: space-around; /* Spreads buttons evenly across the height */
   list-style: none;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-right: 2rem;
 }
 
 nav ul li {
   display: inline-block;
-  font-family: "PPNeueMontreal-Medium";
+  font-family: "PPNeueMontreal-Thin";
   font-size: 1.1rem;
   font-weight: --fw-bold;
 }
