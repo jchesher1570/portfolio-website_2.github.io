@@ -460,22 +460,6 @@ header.sticky nav ul {
   transition: var(--default-transition);
 }
 
-#logo {
-  margin: 25px 0px 0px 25px;
-  margin-bottom: bottom;
-  cursor: pointer;
-}
-
-#logo-link:hover #logo #text111, #logo-link:hover #logo #rect515, #navClosed:hover, #navOpen:hover {
-  color: var(--button-text);
-  fill: var(--button-text);
-}
-
-#text111, #rect515 {
-  color: var(--primary-text);
-  fill: var(--primary-text);
-}
-
 nav {
     flex: 1; /* Makes the nav container take up all remaining space */
     justify-content: space-between;
@@ -519,6 +503,26 @@ nav ul li a:hover {
 #social-list {
     padding-top: 4rem;
 }
+
+/* ================================================= */
+/* Header & Nav Bar */
+/* ================================================= */
+
+#logo {
+  margin: 25px 0px 0px 25px;
+  margin-top: auto;
+}
+
+#logo-link:hover #logo #text111, #logo-link:hover #logo #rect515, #navClosed:hover, #navOpen:hover {
+  color: var(--button-text);
+  fill: var(--button-text);
+}
+
+#text111, #rect515 {
+  color: var(--primary-text);
+  fill: var(--primary-text);
+}
+
 
 /* ================================================= */
 /* Theme Switcher */
