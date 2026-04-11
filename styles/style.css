@@ -471,6 +471,7 @@ nav {
 .link-icon {
     font-size: 1.5rem;
     justify-content: none; /* Spreads buttons evenly across the height */
+    padding: 0;
 }
 
 nav ul {
@@ -516,7 +517,7 @@ nav ul li a:hover {
 /* ================================================= */
 
 #logo {
-  margin-top: 21.5rem;
+  margin-top: 18rem;
   margin-left: 1rem;
   padding: 0.5rem;
 }
