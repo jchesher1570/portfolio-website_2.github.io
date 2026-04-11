@@ -502,8 +502,8 @@ nav ul li {
 nav ul li a {
   display: block;
   text-align: left;
-  padding: 1rem 1rem 1rem 3rem;
   transition: background 0.3s;
+  text-decoration: none;
   color: var(--primary-text);
 }
 
