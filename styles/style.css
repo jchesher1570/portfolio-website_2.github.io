@@ -466,6 +466,10 @@ nav {
     transition: var(--default-transition);
 }
 
+#sidemenu {
+    margin-top: 4rem;
+}
+
 nav ul {
   display: flex;
   flex-direction: column;
