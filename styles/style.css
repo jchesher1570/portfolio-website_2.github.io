@@ -509,7 +509,8 @@ nav ul li a:hover {
 /* ================================================= */
 
 #logo {
-  margin-top: 19rem;
+  margin-top: 24rem;
+  margin-left: 8rem;
 }
 
 #logo-link:hover #logo #text111, #logo-link:hover #logo #rect515, #navClosed:hover, #navOpen:hover {
