@@ -469,7 +469,8 @@ nav {
 }
 
 .link-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    justify-content: none; /* Spreads buttons evenly across the height */
 }
 
 nav ul {
