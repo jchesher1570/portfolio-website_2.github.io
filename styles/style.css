@@ -518,11 +518,6 @@ nav ul li a:hover {
   padding: 0.5rem;
 }
 
-#logo-link:hover #logo #text111, #logo-link:hover #logo #rect515, #navClosed:hover, #navOpen:hover {
-  color: var(--button-text);
-  fill: var(--button-text);
-}
-
 #text111, #rect515 {
   color: var(--primary-text);
   fill: var(--primary-text);
