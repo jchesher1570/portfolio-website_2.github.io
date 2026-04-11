@@ -489,7 +489,7 @@ nav ul {
   justify-content: space-around; /* Spreads buttons evenly across the height */
   list-style: none;
   padding-top: 1rem;
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
 
 nav ul li {
@@ -502,6 +502,7 @@ nav ul li {
 nav ul li a {
   display: block;
   text-align: left;
+  padding: 1rem 1rem 1rem 2rem;
   transition: background 0.3s;
   text-decoration: none;
   color: var(--primary-text);
