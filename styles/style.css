@@ -608,14 +608,14 @@ body.dark .knob {
   width: min-content;
   word-wrap: break-word; /* Ensures long words don't overflow */
   padding-top: 4.75rem;
-  margin-left: 17.5rem;
+  margin-left: 18.5rem;
 }
 
 #hero h2 {
   text-align: left;
   font-family: "PPNeueMontreal-Thin";
   padding-right: 12.5rem;
-  margin-left: 18rem;
+  margin-left: 19rem;
 }
 
 /* ================================================= */
