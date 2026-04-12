@@ -498,7 +498,7 @@ nav ul li {
   color: var(--primary-text);
 }
 
-.nav_link::after {
+#explore-link::after {
   content: "";
   position: absolute;
   left: 4rem;
