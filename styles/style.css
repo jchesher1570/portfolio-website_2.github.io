@@ -498,17 +498,6 @@ nav ul li {
   color: var(--primary-text);
 }
 
-#explore-link {
-  display: block;
-  text-align: left;
-  padding-top: 2rem;
-  padding-left: 4rem;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  text-decoration: none;
-  color: var(--primary-text);
-}
-
 #explore-link::after {
   content: "";
   position: absolute;
