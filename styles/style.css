@@ -318,7 +318,6 @@ body {
   font-size: var(--fs-body);
   font-family: var(--primary-font);
   line-height: 1.6;
-  margin-top: 0px; /* Add a top margin to avoid content overlay */
   justify-content: center;
   background-color: var(--page-bg);
   color: var(--primary-text);
