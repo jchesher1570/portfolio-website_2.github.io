@@ -511,10 +511,10 @@ nav ul li {
   }
 
   .nav_link:hover::after {
-      width: 130%;
+      width: 140%;
   }
 
-  /*
+/*
 nav ul li a:hover {
   color: var(--button-text);
 }
@@ -542,7 +542,7 @@ nav ul li a:hover {
 /* ================================================= */
 
 #logo {
-  margin-top: 23.5rem;
+  margin-top: 24rem;
   margin-left: 1rem;
   padding: 0.5rem;
 }
