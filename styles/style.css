@@ -514,19 +514,12 @@ nav ul li {
   width: 0;
   height: 2px;
   background-color: var(--primary-text);
-
   transition: width 0.3s ease;
-  }
+}
 
 #explore-link:hover::after {
       width: 140%;
-  }
-
-/*
-nav ul li a:hover {
-  color: var(--button-text);
 }
-*/
 
 /* ================================================= */
 /* Social List */
@@ -550,8 +543,8 @@ nav ul li a:hover {
 /* ================================================= */
 
 #logo {
-  margin-top: 24rem;
-  margin-left: 1rem;
+  margin-top: 24.5rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
 }
 
