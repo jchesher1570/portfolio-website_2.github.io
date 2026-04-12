@@ -615,6 +615,18 @@ body.dark .knob {
 /* About Me Styles */
 /* ================================================= */
 
+#about-me {
+  display: flex;
+  justify-content: flex-end;  /* push to right */
+  align-items: center;        /* vertical center */
+  height: 100vh;              /* full viewport height */
+}
+
+#bio-p1 {
+  flex-direction: column;
+    align-items: left;
+}
+
 /* ================================================= */
 /* Recent Work */
 /* ================================================= */
