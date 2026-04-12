@@ -500,7 +500,24 @@ nav ul li {
 
 nav ul li a:hover {
   color: var(--button-text);
-  border-bottom: 2px var(--button-text);
+}
+
+/* Create the underline (hidden by default) */
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* adjust spacing under text */
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+
+  transition: width 0.3s ease;
+}
+
+/* Animate underline on hover */
+a:hover::after {
+  width: 100%;
 }
 
 /* ================================================= */
