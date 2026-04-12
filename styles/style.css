@@ -464,8 +464,15 @@ nav {
     transition: var(--default-transition);
 }
 
-#sidemenu {
+#nav-menu {
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures the list fills the nav container */
+    justify-content: space-around; /* Spreads buttons evenly across the height */
+    list-style: none;
+    padding-top: 1rem;
+    padding-right: 6rem;
 }
 
 .link-icon {
@@ -474,15 +481,6 @@ nav {
     padding: 0;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures the list fills the nav container */
-  justify-content: space-around; /* Spreads buttons evenly across the height */
-  list-style: none;
-  padding-top: 1rem;
-  padding-right: 6rem;
-}
 
 nav ul li {
   display: inline-block;
