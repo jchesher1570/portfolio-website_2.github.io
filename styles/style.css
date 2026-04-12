@@ -355,35 +355,6 @@ body::before {
 }
 
 /* ================================================= */
-/* Buttons */
-/* ================================================= */
-
-.btn {
-  display: inline-block;
-  padding: .5em 1em;
-  padding-top: 0.625rem;
-  align-items: center;
-  height: 2.75rem;
-  text-decoration: none;
-  font-family: "PPNeueMontreal-Medium";
-  font-size: 0.875rem;
-  font-weight: var(--fw-bold);
-  background-color: transparent;
-  color: var(--primary-text);
-	border: 1px solid var(--primary-text);
-	border-radius: var(--default-border-radius);
-	white-space: nowrap;
-  cursor: pointer;
-  transition: var(--default-transition);
-}
-
-.btn:hover {
-  background-color: var(--button-text);
-  color: var(--page-bg);
-  border: 1px solid var(--button-text);
-}
-
-/* ================================================= */
 /* Typography */
 /* ================================================= */
 
@@ -413,25 +384,11 @@ h4 {
   font-size: var(--fs-h4);
 }
 
-h6 {
-  font-family: "PPNeueMontreal-Bold";
-  font-weight: --fw-bold;
-  line-height: 1;
-  margin: 0;
-  font-size: var(--fs-h4);
-}
-
-.section__subtitle--work {
-  color: var(--clr-accent);
-  font-weight: var(--fw-bold);
-}
-
 /* ================================================= */
 /* Header & Nav Bar */
 /* ================================================= */
 
 section {
-  border-block-end: none;
 }
 
 header {
