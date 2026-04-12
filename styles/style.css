@@ -617,7 +617,6 @@ body.dark .knob {
 
 #about-me {
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;  /* push to right */
   align-items: center;        /* vertical center */
   height: 100vh;              /* full viewport height */
