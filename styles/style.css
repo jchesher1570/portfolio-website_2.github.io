@@ -503,7 +503,7 @@ nav ul li a:hover {
 }
 
 /* Create the underline (hidden by default) */
-a::after {
+.nav_link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -516,7 +516,7 @@ a::after {
 }
 
 /* Animate underline on hover */
-a:hover::after {
+.nav_link:hover::after {
   width: 100%;
 }
 
