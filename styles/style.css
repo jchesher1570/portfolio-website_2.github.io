@@ -459,7 +459,6 @@ header.sticky nav ul {
 
 nav {
     flex: 1; /* Makes the nav container take up all remaining space */
-    justify-content: space-between;
     transition: var(--default-transition);
 }
 
