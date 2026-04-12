@@ -490,7 +490,8 @@ nav ul li {
 .nav_link {
   display: block;
   text-align: left;
-  padding: 1rem 1rem 1rem 4rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
   transition: background 0.3s;
   position: relative;
   text-decoration: none;
