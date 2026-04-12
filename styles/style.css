@@ -494,10 +494,24 @@ nav ul li {
   transition: background 0.3s;
   position: relative;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
   color: var(--primary-text);
 }
+
+.nav_link::after {
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* adjust spacing under text */
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-text);
+
+  transition: width 0.3s ease;
+  }
+
+  .nav_link:hover::after {
+      width: 100%;
+  }
 
 nav ul li a:hover {
   color: var(--button-text);
