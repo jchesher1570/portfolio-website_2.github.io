@@ -1,5 +1,3 @@
-
-
 .toggle-switch {
   display: inline-flex;
   align-items: center;
@@ -40,7 +38,6 @@
 
 .fa-moon {
   color: var(--primary);
-  
 }
 
 .fa-sun {color: var(--primary);}
