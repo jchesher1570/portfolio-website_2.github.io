@@ -454,7 +454,6 @@ header.sticky {
 }
 
 header.sticky nav ul {
-  padding: 0.75rem 0.75rem;
   transition: var(--default-transition);
 }
 
