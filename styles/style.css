@@ -669,6 +669,10 @@ body.dark .knob {
   height: 100vh;              /* full viewport height */
 }
 
+#bio-p1 {
+    align-items: left;
+}
+
 /* ================================================= */
 /* Recent Work */
 /* ================================================= */
