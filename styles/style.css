@@ -612,13 +612,14 @@ body.dark .knob {
   display: flex;
   justify-content: flex-end; /* right */
   align-items: flex-end;     /* bottom */
+  height: 100%;
 }
 
 #about-me {
   display: flex;
   justify-content: flex-end;  /* push to right */
   align-items: center;        /* vertical center */
-  height: 100%;
+  margin-top: 20rem;
 }
 
 #bio-p1 {
