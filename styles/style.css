@@ -635,9 +635,7 @@ body.dark .knob {
   bottom: -6px;
   width: 450%;        /* extend beyond text */
   height: 1px;
-  background-color: var(--primary-text);
-  transform: scaleY(0.5); /* Shrinks the height to 0.5px visually */
-  transform-origin: center;
+  background-image: linear-gradient(to bottom, var(--primary-text) 50%, transparent 50%);
 }
 
 /* ================================================= */
