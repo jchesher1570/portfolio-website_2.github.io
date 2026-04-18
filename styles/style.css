@@ -627,7 +627,17 @@ body.dark .knob {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 1rem;
-  width 80%;
+  position: relative;
+  display: inline-block;
+}
+
+#bio-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 150%;        /* extend beyond text */
+  height: 2px;
 }
 
 /* ================================================= */
