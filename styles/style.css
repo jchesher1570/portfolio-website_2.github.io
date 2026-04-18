@@ -334,8 +334,8 @@ body::before {
 }
 
 .hs-title {
-  font-family: 'PPNeueMontreal-Medium';
-  margin-bottom: 4rem;
+  font-family: 'PPNeueMontreal-Thin';
+  margin-bottom: 3rem;
   margin-top: 0;
   font-weight: var(--fw-reg);
   letter-spacing: normal;
