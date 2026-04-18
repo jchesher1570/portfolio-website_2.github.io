@@ -626,7 +626,8 @@ body.dark .knob {
 #bio-title {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  text-underline-offset: 1rem;
+  width 10rem;
 }
 
 /* ================================================= */
