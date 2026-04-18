@@ -92,7 +92,7 @@ Primary use: Portfolio Template
 	--primary-text: #3C3A47;
 	--muted-text: #B1B0B5;
 
-  --primary-font: 'PPNeueMontreal-Book';
+  --primary-font: 'PPNeueMontreal-Thin';
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -634,7 +634,7 @@ body.dark .knob {
   left: 0;
   bottom: -6px;
   width: 450%;        /* extend beyond text */
-  height: 2px;
+  height: 1px;
   background-color: var(--primary-text);
 }
 
