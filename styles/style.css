@@ -317,11 +317,6 @@ html {
 }
 
 body {
-    display: flex;
-  justify-content: flex-end; /* move content to the right */
-  align-items: flex-end;     /* move content to the bottom */
-  height: 100%;
-  margin: 0;
   font-size: var(--fs-body);
   font-family: var(--primary-font);
   line-height: 1.6;
