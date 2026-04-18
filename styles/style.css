@@ -608,6 +608,12 @@ body.dark .knob {
 /* About Me Styles */
 /* ================================================= */
 
+.about-me-wrapper {
+  display: flex;
+  justify-content: flex-end; /* right */
+  align-items: flex-end;     /* bottom */
+}
+
 #about-me {
   display: flex;
   justify-content: flex-end;  /* push to right */
