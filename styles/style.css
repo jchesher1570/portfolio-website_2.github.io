@@ -612,7 +612,6 @@ body.dark .knob {
   display: flex;
   justify-content: flex-end;  /* push to right */
   align-items: center;        /* vertical center */
-  height: 100vh;              /* full viewport height */
 }
 
 #bio-p1 {
