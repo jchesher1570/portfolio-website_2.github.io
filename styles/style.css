@@ -98,12 +98,12 @@ Primary use: Portfolio Template
   --fw-bold: 900;
 
   --fs-h1: 8.5rem;
-  --fs-h2: 2.25rem;
+  --fs-h2: 2rem;
   --fs-h3: 1.75rem;
   --fs-h4: 1.5rem;
   --fs-h5: 1.25rem;
   --fs-h6: 1.125rem;
-  --fs-body: 1.75rem;
+  --fs-body: 1.25rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -620,7 +620,7 @@ body.dark .knob {
   flex-direction: column;
   align-items: flex-start;        /* vertical center */
   margin-top: 13rem;
-  margin-right: 10.5rem;
+  margin-right: 5.5rem;
 }
 
 /* ================================================= */
