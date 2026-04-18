@@ -619,7 +619,7 @@ body.dark .knob {
   display: flex;
   justify-content: flex-end;  /* push to right */
   align-items: center;        /* vertical center */
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 
 #bio-p1 {
