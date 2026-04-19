@@ -642,7 +642,18 @@ body.dark .knob {
 }
 
 #bio-p1 {
-    margin-right: 3.75rem;
+  margin-right: 3.75rem;
+  width: min-content;
+  word-wrap: break-word; /* Ensures long words don't overflow */
+  text-align: left;
+}
+
+
+#bio-p2 {
+  margin-right: 3.75rem;
+  width: min-content;
+  word-wrap: break-word; /* Ensures long words don't overflow */
+  text-align: left;
 }
 
 /* ================================================= */
