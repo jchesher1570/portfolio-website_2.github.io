@@ -661,6 +661,7 @@ body.dark .knob {
   display: flex;
   justify-content: flex-start; /* right */
   align-items: flex-start;     /* bottom */
+  margin-top: -10rem;
 }
 
 #contact-p1 {
