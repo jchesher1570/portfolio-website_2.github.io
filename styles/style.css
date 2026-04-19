@@ -623,7 +623,7 @@ body.dark .knob {
   align-items: flex-start;        /* vertical center */
   margin-top: 12.5rem;
   margin-right: 3.5rem;
-  max-width: 45rem
+  max-width: 44rem
 }
 
 #bio-title {
@@ -636,13 +636,13 @@ body.dark .knob {
   position: absolute;
   left: 0;
   bottom: -6px;
-  width: 440%;        /* extend beyond text */
+  width: 430%;        /* extend beyond text */
   height: 1px;
   background-color: rgba(var(--primary-text-rgb), 0.5);
 }
 
 #bio-p1 {
-    margin-right: 2rem;
+    margin-right: 4rem;
 }
 
 /* ================================================= */
