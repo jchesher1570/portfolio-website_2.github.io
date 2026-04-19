@@ -666,6 +666,7 @@ body.dark .knob {
 #contact-p2 {
   margin-left: 18.5rem;
   display: block;
+  padding-bottom: none;
 }
 
 /* ================================================= */
