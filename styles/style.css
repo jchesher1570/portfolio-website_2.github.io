@@ -641,16 +641,12 @@ body.dark .knob {
   background-color: rgba(var(--primary-text-rgb), 0.5);
 }
 
-#bio-p1 {
-  margin-right: 3.75rem;
-  word-wrap: break-word; /* Ensures long words don't overflow */
-  text-align: left;
-}
-
+#bio-p1, 
 #bio-p2 {
   margin-right: 3.75rem;
   word-wrap: break-word; /* Ensures long words don't overflow */
   text-align: left;
+  display: block;
 }
 
 /* ================================================= */
