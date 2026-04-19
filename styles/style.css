@@ -644,6 +644,7 @@ body.dark .knob {
 #bio-p1, 
 #bio-p2 {
   margin-right: 3.75rem;
+  padding-bottom: 0.5rem;
   word-wrap: break-word; /* Ensures long words don't overflow */
   text-align: left;
   display: block;
