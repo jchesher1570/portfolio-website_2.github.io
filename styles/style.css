@@ -644,7 +644,7 @@ body.dark .knob {
 #bio-p1, 
 #bio-p2 {
   margin-right: 3.75rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
   word-wrap: break-word; /* Ensures long words don't overflow */
   text-align: left;
   display: block;
@@ -656,13 +656,16 @@ body.dark .knob {
 
 .contact-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start; /* right */
   align-items: flex-start;     /* bottom */
-  margin-top: -5rem;
+  margin-top: -5.25rem;
 }
 
-#contact-p1 {
+#contact-p1,
+#contact-p2 {
   margin-left: 18.5rem;
+  display: block;
 }
 
 /* ================================================= */
