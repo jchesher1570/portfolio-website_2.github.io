@@ -635,7 +635,7 @@ body.dark .knob {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -10px;
   width: 430%;        /* extend beyond text */
   height: 1px;
   background-color: rgba(var(--primary-text-rgb), 0.5);
