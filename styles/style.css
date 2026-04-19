@@ -664,9 +664,8 @@ body.dark .knob {
 }
 
 #contact-p1 {
-  margin-left: 12rem;
-  word-wrap: break-word; /* Ensures long words don't overflow */
-  text-align: left;
+  margin-left: 20rem;
+  margin-bottom: 10rem;
 }
 
 /* ================================================= */
