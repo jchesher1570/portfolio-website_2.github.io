@@ -661,11 +661,11 @@ body.dark .knob {
   display: flex;
   justify-content: flex-start; /* right */
   align-items: flex-start;     /* bottom */
-  margin-top: -5.5rem;
+  margin-top: -5rem;
 }
 
 #contact-p1 {
-  margin-left: 17.5rem;
+  margin-left: 16rem;
 }
 
 /* ================================================= */
