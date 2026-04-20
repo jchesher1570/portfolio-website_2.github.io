@@ -405,6 +405,24 @@ header.sticky nav ul {
   transition: var(--default-transition);
 }
 
+@keyframes blurIn {
+  from { 
+    filter: blur(20px); 
+    opacity: 0; 
+  }
+  to { 
+    filter: blur(0); 
+    opacity: 1; 
+  }
+}
+
+#nav-container {
+  animation: blurIn 1s ease-out;
+  /* Forces GPU acceleration for smoother interaction */
+  transform: translate3d(0,0,0); 
+  will-change: filter;
+}
+
 nav {
     flex: 1; /* Makes the nav container take up all remaining space */
     transition: var(--default-transition);
