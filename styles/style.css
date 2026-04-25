@@ -612,14 +612,14 @@ body.dark .knob {
   flex-direction: column;
   overflow: hidden;
   font-family: "PPNeueMontreal-Thin";
-  width: min-content;
-  word-wrap: break-word; /* Ensures long words don't overflow */
   padding-top: 4.75rem;
   margin-left: 19rem;
 }
 
 .name-line {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .letter {
