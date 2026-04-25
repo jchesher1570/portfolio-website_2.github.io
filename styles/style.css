@@ -719,7 +719,7 @@ body.dark .knob {
 /* ================================================= */
 
 .motivation-wrapper {
-  margin-top: 25vh;
+  margin-top: 24.5vh;
   display: flex;
   justify-content: flex-start; /* right */
 }
@@ -728,7 +728,7 @@ body.dark .knob {
   display: flex;
   flex-direction: column;
   align-items: flex-start;        /* vertical center */
-  margin-left: 10rem;
+  margin-left: 15rem;
   max-width: 44rem
 }
 
