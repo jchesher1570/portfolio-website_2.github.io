@@ -6,14 +6,14 @@ h1.innerHTML = `
   <div class="name-line first">
     ${firstName.split("").map((l, i) => 
       `<span class="letter-wrap">
-         <span class="letter" style="animation-delay:${baseDelay + i * 0.1}s">${l}</span>
+         <span class="letter" style="animation-delay:${baseDelay + i * 0.08}s">${l}</span>
        </span>`
     ).join("")}
   </div>
   <div class="name-line last">
     ${lastName.split("").map((l, i) => 
       `<span class="letter-wrap">
-         <span class="letter" style="animation-delay:${baseDelay + (i + firstName.length) * 0.1}s">${l}</span>
+         <span class="letter" style="animation-delay:${baseDelay + (i + firstName.length) * 0.08}s">${l}</span>
        </span>`
     ).join("")}
   </div>
