@@ -728,8 +728,7 @@ body.dark .knob {
   display: flex;
   flex-direction: column;
   align-items: flex-start;        /* vertical center */
-  margin-top: 12.5rem;
-  margin-right: 3.5rem;
+  margin-left: 10rem;
   max-width: 44rem
 }
 
