@@ -8,15 +8,6 @@ h1.innerHTML = text
   </div>
   <div class="name-line last">
     ${lastName.split("").map(l => `<span class="letter">${l}</span>`).join("")}
-  </div> `
+  </div> 
+  `;
 
-  .split("")
-  .map(letter => `<span class="letter">${letter === " " ? "&nbsp;" : letter}</span>`)
-  .join("");
-
-
-const letters = document.querySelectorAll(".letter");
-
-letters.forEach((letter, index) => {
-  letter.style.animationDelay = `${index * 0.05}s`;
-});
