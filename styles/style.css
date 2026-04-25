@@ -758,6 +758,46 @@ body.dark .knob {
 }
 
 /* ================================================= */
+/* Skills */
+/* ================================================= */
+
+.skills-wrapper {
+  display: flex;
+  justify-content: flex-start; /* right */
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* vertical center */
+  margin-top: 13rem;
+  max-width: 44rem
+}
+
+#skills-title {
+  position: relative;
+  display: inline-block;
+}
+
+#skills-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 430%;        /* extend beyond text */
+  height: 1px;
+  background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+#skills-p1, 
+#skills-p2 {
+  margin-right: 3.75rem;
+  padding-bottom: 0.25rem;
+  word-wrap: break-word; /* Ensures long words don't overflow */
+  text-align: left;
+  display: block;
+}
+/* ================================================= */
 /* Recent Work */
 /* ================================================= */
 
