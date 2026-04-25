@@ -622,11 +622,17 @@ body.dark .knob {
   white-space: nowrap;
 }
 
+/* This acts like a window */
+.letter-wrap {
+  display: inline-block;
+  overflow: hidden;
+}
+
 .letter {
   display: inline-block;
-  transform: translateY(100%);
+  transform: translateY(120%);
   opacity: 0;
-  animation: riseUp 0.6s ease forwards;
+  animation: riseUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Keyframes */
