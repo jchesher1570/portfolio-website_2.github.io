@@ -721,6 +721,42 @@ body.dark .knob {
 
 .motivation-wrapper {
   margin-top: 25vh;
+  display: flex;
+  justify-content: flex-end; /* right */
+}
+
+#motivation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;        /* vertical center */
+  margin-top: 12.5rem;
+  margin-right: 3.5rem;
+  max-width: 44rem
+}
+
+#motivation-title {
+  position: relative;
+  display: inline-block;
+}
+
+#motivation-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 430%;        /* extend beyond text */
+  height: 1px;
+  background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+#motivation-p1, 
+#motivation-p2
+#motivation-p3 {
+  margin-right: 3.75rem;
+  padding-bottom: 0.25rem;
+  word-wrap: break-word; /* Ensures long words don't overflow */
+  text-align: left;
+  display: block;
 }
 
 /* ================================================= */
