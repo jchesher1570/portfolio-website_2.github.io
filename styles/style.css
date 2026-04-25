@@ -608,6 +608,9 @@ body.dark .knob {
 }
 
 #hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
   font-family: "PPNeueMontreal-Thin";
   width: min-content;
@@ -616,10 +619,8 @@ body.dark .knob {
   margin-left: 19rem;
 }
 
-.first-name,
-.last-name {
+.name-line {
   display: block;
-  text-align: left;
 }
 
 .letter {
