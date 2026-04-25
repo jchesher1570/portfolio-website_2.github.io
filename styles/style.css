@@ -618,7 +618,7 @@ body.dark .knob {
 
 .name-line {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   white-space: nowrap;
 }
 
