@@ -616,6 +616,12 @@ body.dark .knob {
   margin-left: 19rem;
 }
 
+.first-name,
+.last-name {
+  display: block;
+  text-align: left;
+}
+
 .letter {
   display: inline-block;
   transform: translateY(100%);
