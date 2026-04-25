@@ -769,7 +769,7 @@ body.dark .knob {
 #skills {
   display: flex;
   flex-direction: column;
-  align-items: center;        /* vertical center */
+  align-items: flex-start;        /* vertical center */
   margin-top: 13rem;
   max-width: 44rem
 }
