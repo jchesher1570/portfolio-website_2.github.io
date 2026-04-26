@@ -523,13 +523,29 @@ nav ul li {
 /* ================================================= */
 
 #theme-switcher_wrapper {
-  position: fixed;
-  top: -80px; /* hidden */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   transition: top 0.3s ease;
+
+  /* Styling (important so it's visible) */
+  background: var(--bg);
+  backdrop-filter: blur(10px); /* optional nice effect */
+  border-bottom: 1px solid var(--border-color);
 }
 
 #theme-switcher_wrapper.visible {
-    top: 1;
+    position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease;
+
+  /* Styling (important so it's visible) */
+  background: var(--bg);
+  backdrop-filter: blur(10px); /* optional nice effect */
+  border-bottom: 1px solid var(--border-color);
 }
 
 #theme-switcher {
