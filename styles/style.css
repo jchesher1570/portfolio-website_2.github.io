@@ -536,11 +536,16 @@ nav ul li {
 }
 
 #theme-switcher_wrapper.visible {
-    position: sticky;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   transition: top 0.3s ease;
+
+  height: 10%;              /* define the bar height */
+  display: flex;
+  align-items: center;       /* ⬅️ THIS centers vertically */
+  justify-content: flex-end; /* pushes switcher to the right */
 
   /* Styling (important so it's visible) */
   background: var(--bg);
