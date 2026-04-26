@@ -529,7 +529,7 @@ nav ul li {
 }
 
 #theme-switcher_wrapper.visible {
-    top: 0;
+    top: 1;
 }
 
 #theme-switcher {
