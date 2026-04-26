@@ -534,7 +534,6 @@ nav ul li {
   transition: top 0.3s ease;
 
   /* Styling (important so it's visible) */
-  background-color: var(--nav-bg);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -551,7 +550,6 @@ nav ul li {
   justify-content: flex-end; /* pushes switcher to the right */
 
   /* Styling (important so it's visible) */
-  background-color: var(--nav-bg);
   border-bottom: 1px solid var(--border-color);
 }
 
