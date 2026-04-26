@@ -525,6 +525,7 @@ nav ul li {
 #theme-switcher_wrapper {
   position: sticky;
   top: 0;
+  height: 10%;              /* define the bar height */
   width: 100%;
   z-index: 1000;
   transition: top 0.3s ease;
