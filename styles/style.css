@@ -522,6 +522,10 @@ nav ul li {
 /* Theme Switcher */
 /* ================================================= */
 
+#theme-switcher_wrapper {
+    width: 100%;
+}
+
 #theme-switcher {
   background-color: var(--switch-bg);
   border-radius: 2.375rem;
@@ -705,7 +709,7 @@ body.dark .knob {
   align-items: flex-start;     /* bottom */
   margin-top: -5.25rem;
   opacity: 0;
-    animation: fadeInPage 0.8s ease 0.6s forwards;
+  animation: fadeInPage 0.8s ease 0.6s forwards;
 }
 
 #contact-p1,
