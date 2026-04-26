@@ -523,15 +523,7 @@ nav ul li {
 /* ================================================= */
 
 #theme-switcher_wrapper {
-    position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-
-  /* Styling (important so it's visible) */
-  background: var(--bg);
-  backdrop-filter: blur(10px); /* optional nice effect */
-  border-bottom: 1px solid var(--border-color);
+    width: 100%;
 }
 
 #theme-switcher {
