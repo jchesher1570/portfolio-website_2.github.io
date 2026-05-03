@@ -823,6 +823,12 @@ body.dark .knob {
   background-color: rgba(var(--primary-text-rgb), 0.5);
 }
 
+.skills-headings {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 #skills h3 {
   flex: 1;
   text-align: left;
