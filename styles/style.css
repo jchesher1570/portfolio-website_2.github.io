@@ -810,7 +810,6 @@ body.dark .knob {
 #skills-title {
   position: relative;
   display: inline-block;
-  margin-bottom: 10%;
 }
 
 #skills-title::after {
@@ -832,15 +831,6 @@ body.dark .knob {
 #skills h3 {
   flex: 1;
   text-align: left;
-}
-
-#skills-p1, 
-#skills-p2 {
-  margin-right: 3.75rem;
-  padding-bottom: 0.25rem;
-  word-wrap: break-word; /* Ensures long words don't overflow */
-  text-align: left;
-  display: block;
 }
 
 .skills-grid {
