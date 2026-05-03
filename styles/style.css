@@ -800,8 +800,8 @@ body.dark .knob {
 
 #skills {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;        /* vertical center */
+  justify-content: space-between; /* spreads them evenly across the width */
+  align-items: center;            /* keeps them aligned nicely */
   margin-top: 13rem;
   margin-left: 15rem;
   max-width: 90%;
@@ -820,6 +820,11 @@ body.dark .knob {
   width: 1500%;        /* extend beyond text */
   height: 1px;
   background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+#skills h3 {
+  flex: 1;
+  text-align: center;
 }
 
 #skills-p1, 
