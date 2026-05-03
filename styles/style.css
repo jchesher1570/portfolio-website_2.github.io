@@ -804,7 +804,7 @@ body.dark .knob {
   align-items: flex-start;        /* vertical center */
   margin-top: 13rem;
   margin-left: 15rem;
-  max-width: 44rem
+  max-width: 90%;
 }
 
 #skills-title {
