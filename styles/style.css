@@ -797,7 +797,7 @@ body.dark .knob {
 .skills-wrapper {
   display: flex;
   justify-content: flex-start; /* right */
-  margin-left: 6%;
+  margin-left: 4rem;
 }
 
 #skills {
