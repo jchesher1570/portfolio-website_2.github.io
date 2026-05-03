@@ -754,7 +754,7 @@ body.dark .knob {
   margin-top: 24.5vh;
   display: flex;
   justify-content: flex-start; /* right */
-  margin-left: 10%;
+  margin-left: 3%;
 }
 
 #motivation {
