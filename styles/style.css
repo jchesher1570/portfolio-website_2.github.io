@@ -825,7 +825,7 @@ body.dark .knob {
 
 #skills h3 {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 #skills-p1, 
