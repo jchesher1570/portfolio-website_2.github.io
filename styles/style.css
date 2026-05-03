@@ -810,6 +810,7 @@ body.dark .knob {
 #skills-title {
   position: relative;
   display: inline-block;
+  margin-bottom: 5%;
 }
 
 #skills-title::after {
