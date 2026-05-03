@@ -844,7 +844,7 @@ body.dark .knob {
 }
 
 .skills-grid {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
 }
