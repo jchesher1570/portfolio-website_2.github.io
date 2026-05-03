@@ -801,7 +801,7 @@ body.dark .knob {
 #skills {
   display: flex;
   justify-content: space-between; /* spreads them evenly across the width */
-  align-items: left;            /* keeps them aligned nicely */
+  align-items: center;            /* keeps them aligned nicely */
   margin-top: 13rem;
   margin-left: 15rem;
   max-width: 90%;
