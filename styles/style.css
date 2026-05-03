@@ -848,6 +848,7 @@ body.dark .knob {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px; /* 🔥 tight spacing */
 }
 
 .skill {
@@ -855,7 +856,6 @@ body.dark .knob {
   flex-direction: column;
   align-items: left;
   justify-content: flex-start
-  padding: 20px;
   border-radius: 12px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
