@@ -834,6 +834,11 @@ body.dark .knob {
   text-align: left;
 }
 
+.skills-column h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .skills-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -843,12 +848,6 @@ body.dark .knob {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-}
-
-.skills-column h3 {
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .skill {
