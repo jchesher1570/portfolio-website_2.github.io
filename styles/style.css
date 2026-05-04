@@ -872,7 +872,7 @@ body.dark .knob {
 .skill span {
   margin-top: 4px;   /* small gap under icon */
   text-align: left;
-  align-items: left;
+  font-size: 2rem;
 }
 
 #gentoo_logo {
