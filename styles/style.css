@@ -875,7 +875,7 @@ body.dark .knob {
 }
 
 #gentoo_span {
-    margin-top: none;
+    margin-top: 0px;
 }
 
 /* ================================================= */
