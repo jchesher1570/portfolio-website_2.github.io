@@ -863,7 +863,7 @@ body.dark .knob {
   padding: 6px 10px;
   border-radius: 10px;
 
-  border: 1px solid rgba(var(--primary-text-rgb), 0.5);
+  border: 1px solid rgba(var(--primary-text-rgb), 0.2);
   color: var(--primary-text);
   background-color: var(--nav-bg);
 
@@ -873,7 +873,7 @@ body.dark .knob {
 }
 
 .skill:hover {
-  border-color: rgba(var(--primary-text-rgb), 0.5);
+  border-color: rgba(var(--primary-text-rgb), 0.2);
   color: var(--nav-bg);
   background-color: var(--primary-text);
 }
