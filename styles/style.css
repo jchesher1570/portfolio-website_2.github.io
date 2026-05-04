@@ -867,6 +867,10 @@ body.dark .knob {
   background: rgba(255,255,255,0.03); /* subtle card feel */
 }
 
+.skill:hover {
+  border-color: rgba(255,255,255,0.4);
+}
+
 .skill i {
   font-size: 40px;
   line-height: 1;
