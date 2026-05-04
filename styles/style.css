@@ -864,14 +864,14 @@ body.dark .knob {
   border-radius: 6px;
 }
 
-.skill span {
-  margin-top: 4px;   /* small gap under icon */
-  text-align: center;
-}
-
 .skill i {
   font-size: 40px;
   display: block; /* removes inline weirdness */
+}
+
+.skill span {
+  margin-top: 4px;   /* small gap under icon */
+  text-align: left;
 }
 
 /* ================================================= */
