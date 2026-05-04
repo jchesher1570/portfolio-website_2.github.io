@@ -858,8 +858,8 @@ body.dark .knob {
 .skill {
   display: flex;
   flex-direction: column;   /* stack icon above text */  
-  align-items: center;
-  justify-content: center;  /* optional */
+  align-items: left;
+  justify-content: left;  /* optional */
   padding: 8px; /* 🔥 much tighter */
   border-radius: 6px;
 }
