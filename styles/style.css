@@ -860,7 +860,6 @@ body.dark .knob {
   flex-direction: column;   /* stack icon above text */  
   align-items: left;
   justify-content: left;  /* optional */
-  border-radius: 6px;
 }
 
 .skill i {
