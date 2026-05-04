@@ -856,24 +856,28 @@ body.dark .knob {
 }
 
 .skill {
-  display: flex;
-  flex-direction: column;   /* stack icon above text */  
-  align-items: center;
-  justify-content: left;  /* optional */
-  width: 5rem;
-  height: 5rem;
-  border-radius: 0.5rem;
+  display: inline-flex;          /* keeps items compact */
+  align-items: center;           /* vertical alignment */
+  gap: 6px;                      /* space between icon + text */
+
+  padding: 6px 10px;             /* compact padding */
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;           /* 🔥 rounded corners */
+
+  background: rgba(255,255,255,0.03); /* subtle card feel */
 }
 
 .skill i {
   font-size: 40px;
-  display: block; /* removes inline weirdness */
+  line-height: 1;
 }
 
 .skill span {
   margin-top: 4px;   /* small gap under icon */
   text-align: left;
   font-size: 1rem;
+  position: relative;
+  top: 2px; /* 👈 subtle downward shift */
 }
 
 #gentoo_logo {
