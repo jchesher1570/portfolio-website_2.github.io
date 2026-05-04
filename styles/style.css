@@ -851,7 +851,7 @@ body.dark .knob {
 
 .skills-grid {
   display: grid;
-  grid-template-rows: repeat(3, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px; /* 🔥 tight spacing */
 }
 
