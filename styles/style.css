@@ -845,11 +845,14 @@ body.dark .knob {
   gap: 20px;
 }
 
+.skills-column {
+  width: 16rem;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 6px; /* 🔥 tight spacing */
-  width: 14rem;
 }
 
 .skill {
