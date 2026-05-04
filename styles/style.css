@@ -858,7 +858,7 @@ body.dark .knob {
 .skill {
   display: inline-flex;          /* keeps items compact */
   align-items: center;           /* vertical alignment */
-  gap: 6px;                      /* space between icon + text */
+  gap: 1rem;                      /* space between icon + text */
 
   padding: 6px 10px;             /* compact padding */
   border: 1px solid rgba(255,255,255,0.2);
