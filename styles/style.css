@@ -852,13 +852,13 @@ body.dark .knob {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px; /* 🔥 tight spacing */
+  gap: 1rem; /* 🔥 tight spacing */
 }
 
 .skill {
   display: inline-flex;          /* keeps items compact */
   align-items: center;           /* vertical alignment */
-  gap: 1rem;                      /* space between icon + text */
+  gap: 6px;                      /* space between icon + text */
 
   padding: 6px 10px;             /* compact padding */
   border: 1px solid rgba(255,255,255,0.2);
