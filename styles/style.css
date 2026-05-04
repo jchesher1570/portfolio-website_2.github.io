@@ -861,16 +861,17 @@ body.dark .knob {
   gap: 6px;                      /* space between icon + text */
 
   padding: 6px 10px;             /* compact padding */
-  border: 1px solid rgba(255,255,255,0.2);
+  transition: border: 1px solid rgba(255,255,255,0.2) 0.5s ease;
   border-radius: 10px;           /* 🔥 rounded corners */
 
-  background: rgba(255,255,255,0.03); /* subtle card feel */
+  transition: color: var(--nav-bg) 0.5s ease;
+  transition: background: var(--primary-text) 0.5s ease; /* subtle card feel */
 }
 
 .skill:hover {
-  transition: border-color: rgba(255,255,255,0.4) 0.5s ease;
-  transition: color: var(--nav-bg) 0.5s ease;
-  transition: background-color: var(--primary-text) 0.5s ease;
+  border: rgba(255,255,255,0.4);
+  color: var(--nav-bg);
+  background: var(--primary-text);
 }
 
 .skill i {
