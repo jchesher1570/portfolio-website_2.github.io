@@ -846,7 +846,7 @@ body.dark .knob {
 }
 
 .skills-column {
-  width: 19rem;
+  width: 22rem;
 }
 
 .skills-grid {
@@ -862,6 +862,7 @@ body.dark .knob {
   justify-content: left;  /* optional */
   width: 5rem;
   height: 5rem;
+  border-radius: 0.5rem;
 }
 
 .skill i {
