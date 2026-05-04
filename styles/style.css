@@ -874,6 +874,10 @@ body.dark .knob {
   text-align: left;
 }
 
+#gentoo_logo {
+    height: 40px;
+}
+
 #gentoo_span {
     margin-top: 0px;
 }
