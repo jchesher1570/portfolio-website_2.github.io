@@ -867,13 +867,13 @@ body.dark .knob {
   color: var(--primary-text);
   background-color: var(--nav-bg);
 
-  transition: border: 0.5s ease;
-              color: 0.5s ease;
-              background-color: 0.5s ease; /* subtle card feel */
+  transition: border-color 0.5s ease;
+              color 0.5s ease;
+              background-color 0.5s ease; /* subtle card feel */
 }
 
 .skill:hover {
-  border: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.2);
   color: var(--nav-bg);
   background-color: var(--primary-text);
 }
