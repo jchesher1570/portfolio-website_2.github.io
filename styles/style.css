@@ -856,24 +856,24 @@ body.dark .knob {
 }
 
 .skill {
-  display: inline-flex;          /* keeps items compact */
-  align-items: center;           /* vertical alignment */
-  gap: 6px;                      /* space between icon + text */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 
-  padding: 6px 10px;             /* compact padding */
-  border-radius: 10px;           /* 🔥 rounded corners */
+  padding: 6px 10px;
+  border-radius: 10px;
 
   border: 1px solid rgba(255,255,255,0.2);
   color: var(--primary-text);
   background-color: var(--nav-bg);
 
-  transition: border-color 0.5s ease;
-              color 0.5s ease;
-              background-color 0.5s ease; /* subtle card feel */
+  transition: border-color 0.5s ease,
+              color 0.5s ease,
+              background-color 0.5s ease;
 }
 
 .skill:hover {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
   color: var(--nav-bg);
   background-color: var(--primary-text);
 }
