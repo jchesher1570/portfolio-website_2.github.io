@@ -856,16 +856,23 @@ body.dark .knob {
 }
 
 .skill {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;   /* stack icon above text */  
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;  /* optional */
   padding: 4px 8px; /* 🔥 much tighter */
   border-radius: 6px;
+}
+
+.skill span {
+  margin-top: 4px;   /* small gap under icon */
+  text-align: center;
 }
 
 .skill i {
   font-size: 40px;
   margin-bottom: 10px;
+  display: block; /* removes inline weirdness */
 }
 
 /* ================================================= */
