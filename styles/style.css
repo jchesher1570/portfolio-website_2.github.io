@@ -861,6 +861,7 @@ body.dark .knob {
   align-items: left;
   justify-content: left;  /* optional */
   width: 5rem;
+  height: 5rem;
 }
 
 .skill i {
