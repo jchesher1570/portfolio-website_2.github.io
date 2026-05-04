@@ -868,8 +868,8 @@ body.dark .knob {
   background-color: var(--nav-bg);
 
   transition: border: 0.5s ease;
-  transition: color: 0.5s ease;
-  transition: background-color: 0.5s ease; /* subtle card feel */
+              color: 0.5s ease;
+              background-color: 0.5s ease; /* subtle card feel */
 }
 
 .skill:hover {
