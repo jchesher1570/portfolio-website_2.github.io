@@ -853,7 +853,6 @@ body.dark .knob {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px; /* 🔥 tight spacing */
-  align-items: left;
   justify-content: space-evenly;
 }
 
@@ -862,7 +861,7 @@ body.dark .knob {
   flex-direction: column;   /* stack icon above text */  
   align-items: center;
   justify-content: left;  /* optional */
-  width: 8rem;
+  width: 5rem;
   height: 5rem;
   border-radius: 0.5rem;
 }
