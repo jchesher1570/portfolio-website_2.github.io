@@ -846,7 +846,7 @@ body.dark .knob {
 }
 
 .skills-column {
-  width: 22rem;
+  width: 24rem;
 }
 
 .skills-grid {
@@ -861,7 +861,7 @@ body.dark .knob {
   flex-direction: column;   /* stack icon above text */  
   align-items: center;
   justify-content: left;  /* optional */
-  width: 5rem;
+  width: 8rem;
   height: 5rem;
   border-radius: 0.5rem;
 }
