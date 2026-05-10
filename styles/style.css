@@ -902,6 +902,7 @@ body.dark .knob {
 
 #embedded_skills_grid {
   grid-template-columns: repeat(3, min-content);
+  align-items: left;
 }
 
 
