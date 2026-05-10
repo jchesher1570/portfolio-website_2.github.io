@@ -900,10 +900,11 @@ body.dark .knob {
     width: 62px;
 }
 
-#cpp_skill {
-    padding: 0px;
-    gap: 0px;
+#embedded_skills_grid {
+  grid-template-columns: repeat(3, min-content);
 }
+
+
 /* ================================================= */
 /* Recent Work */
 /* ================================================= */
