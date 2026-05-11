@@ -796,11 +796,6 @@ body.dark .knob {
 /* Skills */
 /* ================================================= */
 
-.skills-wrapper {
-  display: flex;
-  justify-content: flex-start; /* right */
-}
-
 #skills {
   display: block;
   justify-content: space-between; /* spreads them evenly across the width */
@@ -894,10 +889,6 @@ body.dark .knob {
 
 #gentoo_logo {
     height: 40px;
-}
-
-#c_skill {
-    width: 62px;
 }
 
 #embedded_skills_grid {
