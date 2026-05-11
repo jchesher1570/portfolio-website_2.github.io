@@ -827,6 +827,10 @@ body.dark .knob {
   width: 100%;
 }
 
+.skills-column {
+  width: 24rem;
+}
+
 #skills h3 {
   flex: 1;
   text-align: left;
@@ -840,10 +844,6 @@ body.dark .knob {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-}
-
-.skills-column {
-  width: 24rem;
 }
 
 .skills-grid {
@@ -889,6 +889,10 @@ body.dark .knob {
 
 #gentoo_logo {
     height: 40px;
+}
+
+#c_skill {
+    width: 62px;
 }
 
 #embedded_skills_grid {
