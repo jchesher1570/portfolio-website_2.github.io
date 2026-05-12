@@ -891,10 +891,6 @@ body.dark .knob {
     height: 40px;
 }
 
-#c_skill {
-    width: 62px;
-}
-
 #embedded_skills_grid {
   grid-template-columns: repeat(3, min-content);
   align-items: left;
