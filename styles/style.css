@@ -908,6 +908,9 @@ body.dark .knob {
 
 #external_links {
   margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .project_link {
