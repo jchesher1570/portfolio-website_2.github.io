@@ -908,12 +908,11 @@ body.dark .knob {
 
 #external_links {
   margin-top: 10%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .project_link {
     font-size: 7.5%;
+    margin-left: auto;
 }
 
 /* ================================================= */
