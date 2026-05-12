@@ -182,6 +182,14 @@ Primary use: Portfolio Template
   --primary: var(--light-primary);
   --link: var(--light-link);
   --hover: var(--light-hover);
+
+  /* Gentoo Icon Colours */
+  --gen-colour-1: #bebdf3;
+  --gen-colour-2: #867fb7;
+  --gen-colour-3: #524c76;
+  --gen-colour-4: #bebbdb;
+  --gen-colour-5: #928bbe;
+  --gen-colour-6: #9f99c7;
 }
 
 /* ============================================================== */
