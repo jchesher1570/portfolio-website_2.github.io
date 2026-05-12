@@ -910,11 +910,10 @@ body.dark .knob {
   margin-top: 10%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
 
 .project_link {
-    font-size: 5%;
+    font-size: 7.5%;
 }
 
 /* ================================================= */
