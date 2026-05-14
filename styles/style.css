@@ -910,12 +910,11 @@ body.dark .knob {
   margin-top: 10%;
   display: flex;
   justify-content: flex-end;
-  text-decoration: none;
+  width: 100%; /* Ensures the container spans the full page width */
 }
 
-.project_link {
+#project_link {
     font-size: 2rem;
-    margin-right: auto;
 }
 
 /* ================================================= */
