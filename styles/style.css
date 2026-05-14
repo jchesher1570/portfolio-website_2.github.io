@@ -907,7 +907,8 @@ body.dark .knob {
 /* ================================================= */
 
 #external_links {
-  margin-top: 10%;
+  margin-top: 8%;
+  margin-bottom: 6%;
   display: flex;
   justify-content: flex-end;
   width: 100%; /* Ensures the container spans the full page width */
@@ -917,6 +918,7 @@ body.dark .knob {
     font-size: 2rem;
     text-decoration: none;
     color: var(--primary-text);
+    margin-right: 4%;
 }
 
 /* ================================================= */
