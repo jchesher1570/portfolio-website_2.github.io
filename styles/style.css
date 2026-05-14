@@ -908,7 +908,7 @@ body.dark .knob {
 
 #external_links {
   margin-top: 8%;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: flex-end;
   width: 100%; /* Ensures the container spans the full page width */
