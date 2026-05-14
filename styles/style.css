@@ -930,6 +930,15 @@ body.dark .knob {
     margin-right: 7.5%;
 }
 
+.arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.external_link:hover .arrow {
+    transform: translateX(6px);
+}
+
 /* ================================================= */
 /* Experience */
 /* ================================================= */
