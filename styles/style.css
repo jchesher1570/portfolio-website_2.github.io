@@ -753,7 +753,7 @@ body.dark .knob {
   margin-left: 19.5rem;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 0.8s; /* delay before appearing */
+  animation-delay: 0.6s; /* delay before appearing */
 }
 
 @keyframes fadeIn {
@@ -786,7 +786,7 @@ body.dark .knob {
   max-width: 44rem;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 0.8s; /* delay before appearing */
+  animation-delay: 0.6s; /* delay before appearing */
 }
 
 #bio-title {
@@ -833,7 +833,7 @@ body.dark .knob {
   padding-bottom: none;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 0.8s; /* delay before appearing */
+  animation-delay: 0.6s; /* delay before appearing */
 }
 
 /* ================================================= */
