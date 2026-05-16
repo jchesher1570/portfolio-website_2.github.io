@@ -510,11 +510,7 @@ nav ul li {
 /* ================================================= */
 
 #social-list {
-  margin-top: 4rem;
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+    margin-top: 4rem;
 }
 
 .social-list_link {
