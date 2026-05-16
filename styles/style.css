@@ -435,7 +435,7 @@ header.sticky nav ul {
 }
 
 #nav-container {
-  animation: blurIn 0.7s ease-out;
+  animation: blurIn 1s ease-out;
   /* Forces GPU acceleration for smoother interaction */
   transform: translate3d(0,0,0); 
   will-change: filter;
@@ -733,9 +733,9 @@ body.dark .knob {
 
 .letter {
   display: inline-block;
-  transform: translateY(25%);
+  transform: translateY(20%);
   opacity: 0;
-  animation: riseUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: riseUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Keyframes */
@@ -752,8 +752,8 @@ body.dark .knob {
   padding-right: 12.5rem;
   margin-left: 19.5rem;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s; /* delay before appearing */
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.4s; /* delay before appearing */
 }
 
 @keyframes fadeIn {
@@ -785,8 +785,8 @@ body.dark .knob {
   margin-right: 3.5rem;
   max-width: 44rem;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s; /* delay before appearing */
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.4s; /* delay before appearing */
 }
 
 #bio-title {
@@ -832,8 +832,8 @@ body.dark .knob {
   display: block;
   padding-bottom: none;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s; /* delay before appearing */
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.4s; /* delay before appearing */
 }
 
 /* ================================================= */

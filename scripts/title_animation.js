@@ -1,6 +1,6 @@
 const h1 = document.querySelector("#hero h1");
 const [firstName, lastName] = h1.textContent.trim().split(" ");
-const baseDelay = 0.75; // delay before anything starts
+const baseDelay = 0.7; // delay before anything starts
 
 h1.innerHTML = `
   <div class="name-line first">
