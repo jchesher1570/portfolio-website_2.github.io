@@ -526,6 +526,11 @@ nav ul li {
       transform 0.35s ease;
 }
 
+.link-icon {
+    height: 3rem:
+    width: 3rem;
+}
+
 /* Expanding circular background */
 .social-list_link::before {
   content: "";
