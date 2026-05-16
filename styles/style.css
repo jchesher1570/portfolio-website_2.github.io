@@ -501,50 +501,34 @@ nav ul li {
   color: var(--primary-text);
 }
 
-#projects-link {
-  display: block;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  text-decoration: none;
-  color: var(--primary-text);
-}
-
-#projects-link::after {
-  content: "";
-  position: absolute;
-  left: 4rem;
-  bottom: -2px; /* adjust spacing under text */
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-text);
-  transition: width 0.3s ease;
-}
-
-#projects-link:hover::after {
-      width: 140%;
-}
-
+#projects-link,
 #experience-link {
   display: block;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  text-decoration: none;
-  color: var(--primary-text);
 }
 
+#projects-link::after,
 #experience-link::after {
   content: "";
   position: absolute;
+
   left: 4rem;
-  bottom: -2px; /* adjust spacing under text */
-  width: 0;
+  bottom: -2px;
+
+  width: 140%;
   height: 2px;
+
   background-color: var(--primary-text);
-  transition: width 0.3s ease;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
 }
 
+#projects-link:hover::after,
 #experience-link:hover::after {
-      width: 140%;
+  transform: scaleX(1);
 }
 
 
