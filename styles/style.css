@@ -425,7 +425,7 @@ header.sticky nav ul {
 
 @keyframes blurIn {
   from { 
-    filter: blur(10px); 
+    filter: blur(5px); 
     opacity: 0; 
   }
   to { 
@@ -435,7 +435,7 @@ header.sticky nav ul {
 }
 
 #nav-container {
-  animation: blurIn 0.8s ease-out;
+  animation: blurIn 1s ease-out;
   /* Forces GPU acceleration for smoother interaction */
   transform: translate3d(0,0,0); 
   will-change: filter;
@@ -582,7 +582,7 @@ nav ul li {
 #logo {
   margin-top: 20rem;
   padding: 0.75rem;
-  animation: blurIn 0.8s ease-out;
+  animation: blurIn 1s ease-out;
 }
 
 #text111, #rect515 {
