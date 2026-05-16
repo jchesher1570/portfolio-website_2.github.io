@@ -509,20 +509,28 @@ nav ul li {
 /* Social List */
 /* ================================================= */
 
-#social-list {
+.social-list {
+    display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
     margin-top: 4rem;
 }
 
 .social-list_link {
+     position: relative;
     height: 3rem;
     width: 3rem;
-    display: block;
+     border-radius: 50%;
+
+  display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
     margin: 1rem 1rem 1rem 4rem;
     transition: background 0.3s;
     text-decoration: none;
+    overflow: hidden;
     color: var(--primary-text);
 
     transition:
