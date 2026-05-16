@@ -520,6 +520,47 @@ nav ul li {
     transition: background 0.3s;
     text-decoration: none;
     color: var(--primary-text);
+
+    transition:
+      color 0.35s ease,
+      transform 0.35s ease;
+}
+
+/* Expanding circular background */
+.social-list_link::before {
+  content: "";
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  border-radius: 50%;
+  background: var(--primary-text);
+
+  transition:
+    width 0.4s ease,
+    height 0.4s ease;
+
+  z-index: 0;
+}
+
+/* Keep icon above animated background */
+.social-list_link .link-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+/* Hover animation */
+.social-list_link:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Change icon colour on hover */
+.social-list_link:hover {
+  color: none;
+  transform: translateY(-3px);
 }
 
 /* ================================================= */
