@@ -491,46 +491,35 @@ nav ul li {
 }
 
 .nav_link {
-  display: block;
-  text-align: left;
+   display: inline-block;
+  position: relative;
   padding-top: 2rem;
   padding-left: 4rem;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
   text-decoration: none;
   color: var(--primary-text);
 }
 
-#projects-link,
-#experience-link {
-  display: block;
-  position: relative;
-}
-
-#projects-link::after,
-#experience-link::after {
+.nav_link::after {
   content: "";
-  position: absolute;
 
+  position: absolute;
   left: 4rem;
   bottom: -2px;
 
-  width: 140%;
+  width: calc(100% - 4rem);
   height: 2px;
 
-  background-color: var(--primary-text);
+  background: var(--primary-text);
 
   transform: scaleX(0);
   transform-origin: left;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-#projects-link:hover::after,
-#experience-link:hover::after {
+.nav_link:hover::after {
   transform: scaleX(1);
 }
-
 
 /* ================================================= */
 /* Social List */
