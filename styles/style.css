@@ -751,7 +751,7 @@ body.dark .knob {
   font-family: "PPNeueMontreal-Thin";
   padding-right: 12.5rem;
   margin-left: 19.5rem;
-  animation: blurIn 0.8s ease-out;
+  animation: blurIn 1.2s ease-out;
 }
 
 /* ================================================= */
@@ -772,7 +772,7 @@ body.dark .knob {
   margin-top: 12.5rem;
   margin-right: 3.5rem;
   max-width: 44rem;
-  animation: blurIn 0.8s ease-out;
+  animation: blurIn 1.2s ease-out;
 }
 
 #bio-title {
