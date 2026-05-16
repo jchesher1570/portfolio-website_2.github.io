@@ -534,7 +534,8 @@ nav ul li {
   width: 0;
   height: 0;
 
-  color: none;
+  color: ;
+  border-radius: 100%;
   background: var(--primary-text);
 
   transition:
@@ -547,7 +548,7 @@ nav ul li {
 /* Keep icon above animated background */
 .social-list_link .link-icon {
   position: relative;
-  z-index: 1;
+  z-index: 1000;
   font-size: 1.5rem;
 }
 
