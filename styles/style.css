@@ -834,6 +834,7 @@ body.dark .knob {
   margin-left: 18.5rem;
   display: block;
   padding-bottom: none;
+  opacity: 1;
 }
 
 /* ================================================= */
