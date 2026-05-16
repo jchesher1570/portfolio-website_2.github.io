@@ -1,8 +1,11 @@
 const lenis = new Lenis({
-  duration: 1.8,
+  duration: 1.1,
+
   smoothWheel: true,
   smoothTouch: true,
-  touchMultiplier: 1.5,
+
+  wheelMultiplier: 1.8,
+  touchMultiplier: 2,
 
   easing: (t) => {
     return 1 - Math.pow(1 - t, 4);
