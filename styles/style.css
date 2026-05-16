@@ -529,6 +529,7 @@ nav ul li {
 #logo {
   margin-top: 25.75rem;
   padding: 0.75rem;
+  animation: blurIn 1s ease-out;
 }
 
 #text111, #rect515 {
