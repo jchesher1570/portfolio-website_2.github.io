@@ -815,6 +815,8 @@ body.dark .knob {
   align-items: flex-start;     /* bottom */
   margin-top: -5.25rem;
   opacity: 0;
+  animation: fadeIn 1.2s ease-out;
+  animation-delay: 1.5s; /* delay before appearing */
 }
 
 #contact-p1,
@@ -822,9 +824,7 @@ body.dark .knob {
   margin-left: 18.5rem;
   display: block;
   padding-bottom: none;
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out;
-  animation-delay: 1.5s; /* delay before appearing */
+  
 }
 
 @keyframes fadeIn {
