@@ -717,7 +717,7 @@ body.dark .knob {
   align-items: flex-start;        /* vertical center */
   margin-top: 12.5rem;
   margin-right: 3.5rem;
-  max-width: 44rem
+  max-width: 44rem;
   animation: blurIn 1s ease-out;
 }
 
