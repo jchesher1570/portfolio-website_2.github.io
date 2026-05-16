@@ -774,6 +774,7 @@ body.dark .knob {
   margin-top: 12.5rem;
   margin-right: 3.5rem;
   max-width: 44rem;
+  opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1.5s; /* delay before appearing */
 }
@@ -821,6 +822,7 @@ body.dark .knob {
   margin-left: 18.5rem;
   display: block;
   padding-bottom: none;
+  opacity: 0;
   animation: fadeIn 1.2s ease-out;
   animation-delay: 1.5s; /* delay before appearing */
 }
