@@ -516,7 +516,7 @@ nav ul li {
 .social-list_link {
     display: block;
     text-align: left;
-    padding: 0rem 1rem 0.5rem 4rem;
+    margin: 0rem 1rem 0.5rem 4rem;
     transition: background 0.3s;
     text-decoration: none;
     color: var(--primary-text);
