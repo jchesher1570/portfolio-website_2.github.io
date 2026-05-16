@@ -831,7 +831,9 @@ body.dark .knob {
   margin-left: 18.5rem;
   display: block;
   padding-bottom: none;
-  opacity: 1;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s; /* delay before appearing */
 }
 
 /* ================================================= */
