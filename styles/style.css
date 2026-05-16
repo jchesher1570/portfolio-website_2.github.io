@@ -824,9 +824,6 @@ body.dark .knob {
   justify-content: flex-start; /* right */
   align-items: flex-start;     /* bottom */
   margin-top: -5.25rem;
-  opacity: 0;
-  animation: fadeIn 1s ease-out;
-  animation-delay: 1.5s; /* delay before appearing */
 }
 
 #contact-p1,
