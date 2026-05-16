@@ -514,6 +514,8 @@ nav ul li {
 }
 
 .social-list_link {
+    height: 3rem;
+    width: 3rem;
     display: block;
     text-align: left;
     margin: 1rem 1rem 1rem 4rem;
@@ -524,11 +526,6 @@ nav ul li {
     transition:
       color 0.35s ease,
       transform 0.35s ease;
-}
-
-.link-icon {
-    height: 3rem:
-    width: 3rem;
 }
 
 /* Expanding circular background */
