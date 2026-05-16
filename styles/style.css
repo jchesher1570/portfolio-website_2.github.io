@@ -323,6 +323,7 @@ Primary use: Portfolio Template
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
   height: 100%;
   margin: 0;
 }
@@ -336,6 +337,10 @@ body {
   color: var(--primary-text);
   transition: color 0.5s;
   transition: var(--default-transition) 0.5s;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
 }
 
 body::before {
@@ -1034,6 +1039,17 @@ body.dark .knob {
     100% { transform: translateX(0); }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
 
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
