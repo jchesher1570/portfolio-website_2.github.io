@@ -735,7 +735,7 @@ body.dark .knob {
   display: inline-block;
   transform: translateY(20%);
   opacity: 0;
-  animation: riseUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: riseUp 1s cubic-bezier(0.22, 1.2, 0.36, 1) forwards;
 }
 
 /* Keyframes */
