@@ -756,6 +756,16 @@ body.dark .knob {
   animation-delay: 1.5s; /* delay before appearing */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* ================================================= */
 /* About Me Styles */
 /* ================================================= */
@@ -824,16 +834,6 @@ body.dark .knob {
   margin-left: 18.5rem;
   display: block;
   padding-bottom: none;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 /* ================================================= */
