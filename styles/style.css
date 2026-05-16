@@ -435,7 +435,7 @@ header.sticky nav ul {
 }
 
 #nav-container {
-  animation: blurIn 1s ease-out;
+  animation: blurIn 0.7s ease-out;
   /* Forces GPU acceleration for smoother interaction */
   transform: translate3d(0,0,0); 
   will-change: filter;
