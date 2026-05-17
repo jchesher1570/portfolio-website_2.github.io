@@ -1,4 +1,3 @@
-<script>
   const navLinks = document.querySelectorAll(
     ".nav_link_home, .nav_link"
   );
@@ -15,4 +14,3 @@
       link.classList.add("active");
     });
   });
-</script>
