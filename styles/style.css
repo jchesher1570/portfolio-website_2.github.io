@@ -500,6 +500,15 @@ nav ul li {
   padding-left: 4rem;
   text-decoration: none;
   color: var(--primary-text);
+
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Currently selected link */
+.nav_link_home.active,
+.nav_link.active {
+  opacity: 1;
 }
 
 .nav_link::after {
