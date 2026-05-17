@@ -501,7 +501,7 @@ nav ul li {
   text-decoration: none;
   color: var(--primary-text);
 
-  opacity: 0.4;
+  opacity: 0.5;
   transition: opacity 0.3s ease;
 }
 
