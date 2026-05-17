@@ -1,5 +1,35 @@
-#projects {
+.page {
   display: flex;
-  justify-content: flex-end;
-  width: 40%;
+  justify-content: flex-end; /* pushes content to right */
+}
+
+#projects {
+  width: 40vw; /* 40% of viewport width */
+  margin-top: 10%;
+}
+
+#projects-title {
+  position: relative;
+  display: inline-block;
+}
+
+#projects-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 422%;        /* extend beyond text */
+  height: 1px;
+  background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+/* the tag */
+#projects-title .tag {
+  position: absolute;
+  right: -322%;   /* aligns with end of 422% underline */
+  bottom: 0;      /* sits just above the underline */
+  font-size: 1.25rem;
+  color: var(--primary-text);
+  white-space: nowrap;
+  font-family: "PPNeueMontreal-Thin";
 }
