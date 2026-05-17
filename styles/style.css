@@ -492,6 +492,7 @@ nav ul li {
   font-weight: --fw-bold;
 }
 
+.nav_link_home,
 .nav_link {
    display: inline-block;
   position: relative;
