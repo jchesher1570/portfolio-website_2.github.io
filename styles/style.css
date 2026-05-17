@@ -545,7 +545,7 @@ nav ul li {
   display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 1rem 0rem 4rem;
+    margin: 0rem 1rem 0rem 4rem;
     transition: background 0.3s;
     text-decoration: none;
     overflow: hidden;
