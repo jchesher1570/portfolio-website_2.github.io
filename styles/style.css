@@ -505,6 +505,12 @@ nav ul li {
   transition: opacity 0.3s ease;
 }
 
+/* Restore full opacity on hover */
+.nav_link_home:hover,
+.nav_link:hover {
+  opacity: 1;
+}
+
 /* Currently selected link */
 .nav_link_home.active,
 .nav_link.active {
@@ -531,7 +537,6 @@ nav ul li {
 
 .nav_link:hover::after {
   transform: scaleX(1);
-  opacity: 1;
 }
 
 /* ================================================= */
