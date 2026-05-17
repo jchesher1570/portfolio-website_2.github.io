@@ -508,7 +508,7 @@ nav ul li {
   left: 4rem;
   bottom: -2px;
 
-  width: calc(100% - 4rem);
+  width: 140%;
   height: 2px;
 
   background: var(--primary-text);
@@ -520,7 +520,7 @@ nav ul li {
 }
 
 .nav_link:hover::after {
-  transform: scaleX(1.4);
+  transform: scaleX(1);
 }
 
 /* ================================================= */
