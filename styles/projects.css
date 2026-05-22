@@ -35,15 +35,11 @@
 }
 
 #project_tally {
-    margin-top 8rem;
+  margin-top: 8rem;
 }
 
-
-#project_title {
-    margin-top 1rem;
-}
-
-
+#project_title,
 #project_category {
-    margin-top 1rem;
+  margin-top: 2rem;
 }
+
