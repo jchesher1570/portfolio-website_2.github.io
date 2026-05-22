@@ -33,3 +33,17 @@
   white-space: nowrap;
   font-family: "PPNeueMontreal-Thin";
 }
+
+#project_tally {
+    margin-top 8rem;
+}
+
+
+#project_title {
+    margin-top 1rem;
+}
+
+
+#project_category {
+    margin-top 1rem;
+}
