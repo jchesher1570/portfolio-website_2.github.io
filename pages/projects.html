@@ -244,30 +244,45 @@
     </div>
     </div>
 
-    <div class="page_rhs">
-      <section id="projects" class="fade-in visible">
-        <h2 class="hs-title" id="projects-title">
-          PROJECTS
-          <a href="https://github.com/jchesher1570/" target="_blank">
-          <span class="tag">/jchesher1570</span>
-          </a>
-        </h2>
-
-        <div id="project_counter">
-          <h3 id="project_tally">[ 01 / 02 ]</h3>
-          <h3 id="project_title">Zombified</h3>
-          <h4 id="project_category">Personal Project / Full Stack</h4>
-          <p id="project_paragraph">A Pac-Man based JavaScript game, which has been centered around the theme of zombies.</p>
-        </div>
-      </section>
-  </div>
+    <div class="page_container">
 
   <div class="page_lhs">
     <div id="project_videos">
-      <h2>TEST</h2>
+      <video
+      id="zombie_demo_video"
+      muted
+      preload="metadata"
+      playsinline
+    >
+      <source src="./videos/zombie-demo.mp4" type="video/mp4" />
+    </video>
     </div>
   </div>
 
+  <div class="page_rhs">
+    <section id="projects" class="fade-in visible">
+      <h2 class="hs-title" id="projects-title">
+        PROJECTS
+        <a href="https://github.com/jchesher1570/" target="_blank">
+          <span class="tag">/jchesher1570</span>
+        </a>
+      </h2>
+
+      <div id="project_counter">
+        <h3 id="project_tally">[ 01 / 02 ]</h3>
+        <h3 id="project_title">Zombified</h3>
+        <h4 id="project_category">Personal Project / Full Stack</h4>
+
+        <p id="project_paragraph">
+          A Pac-Man based JavaScript game, which has been centered around the theme of zombies.
+        </p>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+  <script src="../scripts/zombie_animator.js"></script>
 
 </body>
 </html>

@@ -1,21 +1,28 @@
-.page_lhs {
+.page_container {
   display: flex;
-  justify-content: flex-start; /* pushes content to right */
+
+  width: 100%;
+  min-height: 100vh;
 }
 
-#project_videos {
-  width: 40vw; /* 40% of viewport width */
-  margin-top: 10%;
+.page_lhs {
+  width: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page_rhs {
+  width: 40%;
+
   display: flex;
-  justify-content: flex-end; /* pushes content to right */
+  justify-content: center;
 }
 
 #projects {
   width: 40vw; /* 40% of viewport width */
-  margin-top: 10%;
+  margin-top: 24%;
 }
 
 #projects-title {
@@ -63,4 +70,16 @@
     font-weight: --fw-bold;
     line-height: 1;
     font-family: "PPNeueMontreal-Thin";
+}
+
+#project_videos {
+  width: 100%;
+}
+
+#zombie_demo_video {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  object-fit: cover;
 }
