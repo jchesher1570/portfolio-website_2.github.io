@@ -1,4 +1,14 @@
-.page {
+.page_lhs {
+  display: flex;
+  justify-content: flex-start; /* pushes content to right */
+}
+
+#project_videos {
+  width: 40vw; /* 40% of viewport width */
+  margin-top: 10%;
+}
+
+.page_rhs {
   display: flex;
   justify-content: flex-end; /* pushes content to right */
 }
@@ -35,11 +45,22 @@
 }
 
 #project_tally {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
-#project_title,
-#project_category {
+#project_title {
   margin-top: 2rem;
 }
 
+#project_category {
+  margin-top: 1rem;
+}
+
+#project_paragraph {
+    margin-top: 2rem;
+    width: 75%;
+    font-size: 1.5;
+    font-weight: --fw-bold;
+    line-height: 1;
+    font-family: "PPNeueMontreal-Thin";
+}
