@@ -1,50 +1,40 @@
-const videos = document.querySelectorAll(".gallery-video");
 const gallery = document.getElementById("project_videos");
+const track = document.querySelector(".video_track");
+const videos = document.querySelectorAll(".gallery-video");
 
 let currentIndex = 0;
 let scrolling = false;
 
-function showVideo(index) {
+videos.forEach(video => video.play());
 
-  videos.forEach(video => {
-    video.pause();
-    video.currentTime = 0;
-    video.classList.remove("active");
-  });
+function moveTo(index) {
 
-  const activeVideo = videos[index];
+    const videoHeight = gallery.offsetHeight;
 
-  activeVideo.classList.add("active");
+    track.style.transform =
+        `translateY(-${index * videoHeight}px)`;
 
-  activeVideo.play().catch(err => {
-    console.log(err);
-  });
-
-  currentIndex = index;
+    currentIndex = index;
 }
-
-// Start first video
-showVideo(0);
 
 gallery.addEventListener("wheel", (e) => {
 
-  e.preventDefault();
+    e.preventDefault();
 
-  if (scrolling) return;
+    if (scrolling) return;
 
-  scrolling = true;
+    scrolling = true;
 
-  if (e.deltaY > 0) {
-    currentIndex = (currentIndex + 1) % videos.length;
-  } else {
-    currentIndex =
-      (currentIndex - 1 + videos.length) % videos.length;
-  }
+    if (e.deltaY > 0 && currentIndex < videos.length - 1) {
+        moveTo(currentIndex + 1);
+    }
 
-  showVideo(currentIndex);
+    if (e.deltaY < 0 && currentIndex > 0) {
+        moveTo(currentIndex - 1);
+    }
 
-  setTimeout(() => {
-    scrolling = false;
-  }, 500);
+    setTimeout(() => {
+        scrolling = false;
+    }, 800);
 
 }, { passive: false });
