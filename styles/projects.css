@@ -51,10 +51,6 @@
   font-family: "PPNeueMontreal-Thin";
 }
 
-#project_tally {
-  margin-top: 5rem;
-}
-
 #project_title {
   margin-top: 2rem;
 }
@@ -77,22 +73,21 @@
     width: 100%;
     height: 600px;
     overflow: hidden;
+    pointer-events: auto;
 }
 
-.video_track .project_video_track {
+.video_track {
     display: flex;
     flex-direction: column;
-
     transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
     will-change: transform;
 }
 
 .gallery-video {
-    display: block;
     width: 100%;
     height: 600px;
+    display: block;
     object-fit: cover;
-
     flex-shrink: 0;
 }
 
@@ -104,4 +99,7 @@
 
 .project_info {
     height: 600px;
+
+    display: flex;
+    flex-direction: column;
 }
