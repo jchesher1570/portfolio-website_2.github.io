@@ -1,5 +1,6 @@
 const gallery = document.getElementById("project_videos");
-const track = document.querySelector(".video_track");
+const videoTrack = document.querySelector(".video_track");
+const infoTrack = document.querySelector(".project_info_track");
 const videos = document.querySelectorAll(".gallery-video");
 
 let currentIndex = 0;
@@ -10,9 +11,15 @@ videos.forEach(video => video.play());
 function moveTo(index) {
 
     const videoHeight = gallery.offsetHeight;
+    const gap = 60; // Match your CSS gap
 
-    track.style.transform =
-        `translateY(-${index * videoHeight}px)`;
+    const offset = index * (videoHeight + gap);
+
+    videoTrack.style.transform =
+        `translateY(-${offset}px)`;
+
+    infoTrack.style.transform =
+        `translateY(-${offset}px)`;
 
     currentIndex = index;
 }
