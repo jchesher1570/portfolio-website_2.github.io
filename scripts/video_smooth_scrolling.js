@@ -25,38 +25,51 @@ const projects = [
     }
 ];
 
-// -------------------------
+
+// ===============================
+// CONFIG
+// ===============================
+const gap = 60;
+const videoHeight = document.querySelector(".gallery-video").offsetHeight;
+const itemHeight = videoHeight + gap;
+
+const maxScroll = (videos.length - 1) * itemHeight;
+
+
+// ===============================
 // STATE
-// -------------------------
+// ===============================
 let currentY = 0;
 let targetY = 0;
+let lastIndex = -1;
 
-// IMPORTANT: must match CSS
-const itemHeight = gallery.offsetHeight + 60; // height + gap
 
-// -------------------------
-// PLAY VIDEOS
-// -------------------------
-videos.forEach(v => v.play().catch(() => {}));
+// ===============================
+// START VIDEOS
+// ===============================
+videos.forEach(v => {
+    v.play().catch(() => {});
+});
 
-// -------------------------
-// WHEEL INPUT (SMOOTH TARGET)
-// -------------------------
+
+// ===============================
+// WHEEL INPUT (SMOOTH CONTROL)
+// ===============================
 gallery.addEventListener("wheel", (e) => {
     e.preventDefault();
 
-    targetY += e.deltaY * 1; // sensitivity
+    // Increase responsiveness (this was your main issue)
+    targetY += e.deltaY * 2.8;
 
-    const maxScroll =
-        (videos.length - 1) * itemHeight;
-
+    // Clamp scroll range
     targetY = Math.max(0, Math.min(targetY, maxScroll));
 
 }, { passive: false });
 
-// -------------------------
-// UI UPDATE BASED ON POSITION
-// -------------------------
+
+// ===============================
+// UPDATE UI
+// ===============================
 function updateUI(index) {
     const p = projects[index];
 
@@ -66,12 +79,13 @@ function updateUI(index) {
     paragraph.textContent = p.description;
 }
 
-// -------------------------
-// ANIMATION LOOP
-// -------------------------
+
+// ===============================
+// MAIN ANIMATION LOOP
+// ===============================
 function animate() {
 
-    // smooth lerp
+    // Smooth interpolation (Lenis-style feel)
     currentY += (targetY - currentY) * 0.08;
 
     videoTrack.style.transform =
@@ -80,15 +94,16 @@ function animate() {
     infoTrack.style.transform =
         `translateY(-${currentY}px)`;
 
-    // determine active index
+    // Determine active slide index
     const index = Math.round(currentY / itemHeight);
 
-    // sync UI only when changed
-    if (index !== window._lastIndex) {
-        window._lastIndex = index;
+    // Only update when index changes
+    if (index !== lastIndex) {
+        lastIndex = index;
+
         updateUI(index);
 
-        // control video playback
+        // Sync video playback
         videos.forEach((v, i) => {
             if (i === index) {
                 v.currentTime = 0;
@@ -102,4 +117,9 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+
+// ===============================
+// INIT
+// ===============================
+updateUI(0);
 animate();
