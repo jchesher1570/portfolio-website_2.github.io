@@ -55,19 +55,6 @@
   margin-top: 2rem;
 }
 
-#project_category {
-  margin-top: 1rem;
-}
-
-#project_paragraph {
-    margin-top: 2rem;
-    width: 75%;
-    font-size: 1.5;
-    font-weight: --fw-bold;
-    line-height: 1;
-    font-family: "PPNeueMontreal-Thin";
-}
-
 #project_videos {
     position: relative;
     width: 100%;
@@ -103,3 +90,17 @@
     display: flex;
     flex-direction: column;
 }
+
+#project_category {
+  margin-top: 1rem;
+}
+
+#project_paragraph {
+    margin-top: 2rem;
+    width: 75%;
+    font-size: 1.5;
+    font-weight: --fw-bold;
+    line-height: 1;
+    font-family: "PPNeueMontreal-Thin";
+}
+

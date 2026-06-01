@@ -82,9 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         videoTrack.style.transform =
             `translateY(-${currentY}px)`;
 
-        infoTrack.style.transform =
-            `translateY(-${currentY}px)`;
-
         const index = Math.round(currentY / itemHeight);
 
         if (index !== lastIndex) {
