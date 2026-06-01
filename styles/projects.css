@@ -2,12 +2,12 @@
   display: flex;
 
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .page_lhs {
-  width: 60%;
-
+  width: 40%;
+  margin-left: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
 
 .page_rhs {
   width: 40%;
-
+  margin-left: 5%;
   display: flex;
   justify-content: center;
 }
@@ -130,6 +130,11 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.project_info_fade {
+    opacity: 0;
+    transition: opacity 0.25s ease;
 }
 
 #project_category {

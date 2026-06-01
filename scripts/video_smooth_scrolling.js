@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const videos = document.querySelectorAll(".gallery-video");
 
+    const projectText = document.getElementById("project_text");
+
     // ===============================
     // DATA
     // ===============================
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentY = 0;
     let targetY = 0;
     let lastIndex = -1;
+    let isFading = false;
 
     // NEW
     let scrollDirection = 1;
@@ -79,11 +82,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const p = projects[index];
 
-        title.textContent = p.title;
-        category.textContent = p.category;
-        paragraph.textContent = p.description;
+        if (isFading) return;
+        isFading = true;
 
-        // restart animation
+        projectText.style.opacity = 0;
+
+        setTimeout(() => {
+
+            title.textContent = p.title;
+            category.textContent = p.category;
+            paragraph.textContent = p.description;
+
+            projectText.style.opacity = 1;
+
+            isFading = false;
+
+        }, 200);
+
         projectNumber.classList.remove(
             "number-up",
             "number-down"
