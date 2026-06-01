@@ -86,9 +86,50 @@
 
 .project_info {
     height: 600px;
-
     display: flex;
     flex-direction: column;
+    transition: opacity 0.25s ease;
+}
+
+#project_tally {
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+#project_number {
+    display: inline-block;
+}
+
+.number-up {
+    animation: numberUp 0.4s ease;
+}
+
+.number-down {
+    animation: numberDown 0.4s ease;
+}
+
+@keyframes numberUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes numberDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 #project_category {
