@@ -61,12 +61,13 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .video_track {
     display: flex;
     flex-direction: column;
-    gap: 40vh;
     transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
     will-change: transform;
 }
@@ -77,6 +78,7 @@
     display: block;
     object-fit: cover;
     flex-shrink: 0;
+    margin-bottom: 40vh;
 }
 
 #zombie-demo {

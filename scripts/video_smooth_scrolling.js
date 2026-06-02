@@ -39,9 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // CONFIG
     // ===============================
-    const gap = 60;
-    const videoHeight = 600;
-    const itemHeight = videoHeight + gap;
+    const itemHeight = window.innerHeight;
     const maxScroll = (videos.length - 1) * itemHeight;
 
     // ===============================
@@ -129,11 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
         currentY += (targetY - currentY) * 0.15;
 
         videoTrack.style.transform =
-            `translateY(-${currentY}px)`;
+            `translateY(calc(-${currentY}px + 50vh))`;
 
-        const index = Math.round(
-            currentY / itemHeight
-        );
+        const index = Math.min(videos.length - 1, Math.max(0, Math.round(currentY / itemHeight)));
 
         if (index !== lastIndex) {
 
