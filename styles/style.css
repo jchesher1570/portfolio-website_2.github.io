@@ -629,14 +629,15 @@ nav ul li {
 /* ================================================= */
 
 #theme-switcher_wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: 10%;              /* define the bar height */
+  left: 0;
+  height: 7%;              /* define the bar height */
   width: 100%;
   display: flex;
   align-items: center;       /* ensures consistency */
   justify-content: flex-end;
-  z-index: 1000;
+  z-index: 800;
   transition: top 0.3s ease;
 
   /* Styling (important so it's visible) */
@@ -644,13 +645,15 @@ nav ul li {
 }
 
 #theme-switcher_wrapper.visible {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  height: 7%;              /* define the bar height */
   width: 100%;
-  z-index: 1000;
+  z-index: 800;
   transition: top 0.3s ease;
 
-  height: 10%;              /* define the bar height */
+  height: 7%;              /* define the bar height */
   display: flex;
   align-items: center;       /* ⬅️ THIS centers vertically */
   justify-content: flex-end; /* pushes switcher to the right */
@@ -664,7 +667,7 @@ nav ul li {
   border-radius: 2.375rem;
   height: 2rem;
   width: 4.175rem;
-  margin: 1rem;
+  margin-right: 1rem;
   margin-left: auto;
   display: flex;
   align-items: center;

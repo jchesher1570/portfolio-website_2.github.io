@@ -1,16 +1,17 @@
 .page_container {
   display: flex;
-
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .page_lhs {
   width: 40%;
   margin-left: 15%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 900;
 }
 
 .page_rhs {
@@ -58,14 +59,14 @@
 #project_videos {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     overflow: hidden;
-    pointer-events: auto;
 }
 
 .video_track {
     display: flex;
     flex-direction: column;
+    gap: 40vh;
     transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
     will-change: transform;
 }
@@ -76,6 +77,10 @@
     display: block;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+#zombie-demo {
+    margin-top: 15rem;
 }
 
 #project_info_container {
