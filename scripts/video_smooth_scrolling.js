@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     const itemHeight = window.innerHeight;
     const maxScroll = (videos.length - 1) * itemHeight;
+    const snapToItem = (y) => {
+        return Math.round(y / itemHeight) * itemHeight;
+    };
 
     // ===============================
     // STATE
@@ -66,10 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         e.preventDefault();
 
-        // NEW
         scrollDirection = e.deltaY > 0 ? 1 : -1;
 
-        targetY += e.deltaY * 4;
+        // move by 1 "page" per wheel tick
+        targetY += e.deltaY > 0 ? itemHeight : -itemHeight;
+
+        // snap immediately to grid
+        targetY = snapToItem(targetY);
 
     }, { passive: false });
 
@@ -119,9 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     function animate() {
 
-        targetY = Math.max(
-            0,
-            Math.min(targetY, maxScroll)
+        targetY = snapToItem(
+            Math.max(0, Math.min(targetY, maxScroll))
         );
 
         currentY += (targetY - currentY) * 0.15;
