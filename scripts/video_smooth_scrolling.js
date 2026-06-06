@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentY += (targetY - currentY) * 0.15;
 
         videoTrack.style.transform =
-            `translateY(calc(-${currentY}px + 78vh))`;
+            `translateY(calc(-${currentY}px + 76vh))`;
 
         requestAnimationFrame(() => {
             videoTrack.style.transition =
