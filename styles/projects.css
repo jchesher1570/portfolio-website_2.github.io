@@ -90,6 +90,10 @@
     height: 600px;
     display: flex;
     flex-direction: column;
+}
+
+#project_text {
+    opacity: 1;
     transition: opacity 0.25s ease;
 }
 

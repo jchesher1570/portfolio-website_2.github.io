@@ -84,46 +84,50 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     function updateUI(index, animateNumber = true) {
 
-        const p = projects[index];
+    const p = projects[index];
 
-        if (isFading) return;
-        isFading = true;
+    if (isFading) return;
+    isFading = true;
 
-        projectText.style.opacity = 0;
+    projectText.style.opacity = 0;
 
-        setTimeout(() => {
+    setTimeout(() => {
 
-            title.textContent = p.title;
-            category.textContent = p.category;
-            paragraph.textContent = p.description;
+        title.textContent = p.title;
+        category.textContent = p.category;
+        paragraph.textContent = p.description;
+
+        requestAnimationFrame(() => {
 
             projectText.style.opacity = 1;
 
             isFading = false;
 
-        }, 200);
+        });
 
-        // Always update the number
-        projectNumber.textContent =
-            String(index + 1).padStart(2, "0");
+    }, 200);
 
-        // Only animate when requested
-        if (animateNumber) {
+    // Always update the number
+    projectNumber.textContent =
+        String(index + 1).padStart(2, "0");
 
-            projectNumber.classList.remove(
-                "number-up",
-                "number-down"
-            );
+    // Only animate when requested
+    if (animateNumber) {
 
-            void projectNumber.offsetWidth;
+        projectNumber.classList.remove(
+            "number-up",
+            "number-down"
+        );
 
-            projectNumber.classList.add(
-                scrollDirection > 0
-                    ? "number-up"
-                    : "number-down"
-            );
-        }
+        void projectNumber.offsetWidth;
+
+        projectNumber.classList.add(
+            scrollDirection > 0
+                ? "number-up"
+                : "number-down"
+        );
     }
+}
 
     // ===============================
     // LOOP

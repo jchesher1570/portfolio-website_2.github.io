@@ -1,17 +1,19 @@
-// Switch function
 const switchTheme = () => {
-    // Get root element and data-theme value
-    const rootElem = document.documentElement
-    let dataTheme = rootElem.getAttribute('data-theme'),
-        newTheme
-    newTheme = (dataTheme == 'dark') ? 'light' : 'dark'
- 
-   // Set new HTML attribute
-   rootElem.setAttribute('data-theme', newTheme)
- 
-}
- 
-// Add event listenr for the theme switcher
-document.querySelector('#theme-switcher').addEventListener('click',switchTheme)
 
+    const rootElem = document.documentElement;
 
+    const currentTheme = rootElem.getAttribute('data-theme');
+
+    const newTheme = currentTheme === 'dark'
+        ? 'light'
+        : 'dark';
+
+    rootElem.setAttribute('data-theme', newTheme);
+
+    // Save selection
+    localStorage.setItem('theme', newTheme);
+};
+
+document
+    .querySelector('#theme-switcher')
+    .addEventListener('click', switchTheme);
