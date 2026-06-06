@@ -100,6 +100,8 @@
 #project_tally {
     margin-top: 5rem;
     overflow: hidden;
+    /* Make all digits equal width */
+    font-variant-numeric: tabular-nums;
 }
 
 #project_number {
