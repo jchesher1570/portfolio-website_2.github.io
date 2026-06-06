@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // UI
     // ===============================
-    function updateUI(index) {
+    function updateUI(index, animateNumber = true) {
 
         const p = projects[index];
 
@@ -103,21 +103,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }, 200);
 
-        projectNumber.classList.remove(
-            "number-up",
-            "number-down"
-        );
-
-        void projectNumber.offsetWidth;
-
+        // Always update the number
         projectNumber.textContent =
             String(index + 1).padStart(2, "0");
 
-        projectNumber.classList.add(
-            scrollDirection > 0
-                ? "number-up"
-                : "number-down"
-        );
+        // Only animate when requested
+        if (animateNumber) {
+
+            projectNumber.classList.remove(
+                "number-up",
+                "number-down"
+            );
+
+            void projectNumber.offsetWidth;
+
+            projectNumber.classList.add(
+                scrollDirection > 0
+                    ? "number-up"
+                    : "number-down"
+            );
+        }
     }
 
     // ===============================
@@ -173,7 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
         v.play().catch(() => {});
     });
 
-    updateUI(0);
+    updateUI(0, false);
+    lastIndex = 0;
 
     animate();
 
