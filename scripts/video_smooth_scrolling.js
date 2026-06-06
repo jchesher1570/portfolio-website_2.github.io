@@ -134,6 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
         videoTrack.style.transform =
             `translateY(calc(-${currentY}px + 50vh))`;
 
+        requestAnimationFrame(() => {
+            videoTrack.style.transition =
+                "transform 0.8s cubic-bezier(.22,.61,.36,1)";
+        });
         const index = Math.min(videos.length - 1, Math.max(0, Math.round(currentY / itemHeight)));
 
         if (index !== lastIndex) {

@@ -68,7 +68,6 @@
 .video_track {
     display: flex;
     flex-direction: column;
-    transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
     will-change: transform;
 }
 
