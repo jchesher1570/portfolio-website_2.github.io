@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // CONFIG
     // ===============================
-    const itemHeight = window.innerHeight;
+    const itemHeight = videos[1].offsetTop - videos[0].offsetTop;
     const maxScroll = (videos.length - 1) * itemHeight;
     const snapToItem = (y) => {
         return Math.round(y / itemHeight) * itemHeight;
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentY += (targetY - currentY) * 0.15;
 
         videoTrack.style.transform =
-            `translateY(calc(-${currentY}px + 50vh))`;
+            `translateY(calc(-${currentY}px + 78vh))`;
 
         requestAnimationFrame(() => {
             videoTrack.style.transition =
