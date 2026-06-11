@@ -20,21 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const projectText = document.getElementById("project_text");
 
+    const projectLink = document.getElementById("project_link");
+
     // ===============================
     // DATA
     // ===============================
     const projects = [
-        {
-            title: "Zombified",
-            category: "Personal Project / Full Stack",
-            description: "A Pac-Man based JavaScript game, centred around zombies."
-        },
-        {
-            title: "2D Platformer",
-            category: "Personal Project / Game Development",
-            description: "A side-scrolling platform game featuring custom physics and AI."
-        }
-    ];
+    {
+        title: "Zombified",
+        category: "Personal Project / Full Stack",
+        description: "A Pac-Man based JavaScript game, centred around zombies.",
+        url: "./zombified.html"
+    },
+    {
+        title: "2D Platformer",
+        category: "Personal Project / Game Development",
+        description: "A side-scrolling platform game featuring custom physics and AI.",
+        url: "./platformer.html"
+    }
+];
 
     // ===============================
     // CONFIG
@@ -94,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
 
         title.textContent = p.title;
+        projectLink.href = p.url;
         category.textContent = p.category;
         paragraph.textContent = p.description;
 

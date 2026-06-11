@@ -145,6 +145,11 @@
     transition: opacity 0.25s ease;
 }
 
+#project_link {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
 #project_category {
   margin-top: 1rem;
 }
