@@ -1,0 +1,48 @@
+.back_button {
+  margin-left: 17.875rem;
+  margin-top: 3.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-family: 'PPNeueMontreal-Thin'
+}
+
+.back_button_link {
+  text-decoration: none;
+  color: var(--primary-text);
+  font-family: 'PPNeueMontreal-Thin'
+}
+
+#projects-title {
+  position: relative;
+  display: inline-block;
+  margin-left: 17.875rem;
+  margin-top: 8.25rem;
+  font-size: 2.5rem;
+  font-family: 'PPNeueMontreal-Thin'
+}
+
+#projects-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 765%;        /* extend beyond text */
+  height: 1px;
+  background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+/* the tag */
+#projects-title .tag {
+  position: absolute;
+  right: -660%;   /* aligns with end of 422% underline */
+  bottom: 0;      /* sits just above the underline */
+  font-size: 1.25rem;
+  color: var(--primary-text);
+  white-space: nowrap;
+  font-family: "PPNeueMontreal-Thin";
+}
+
+#project_title {
+  margin-top: 2rem;
+}
