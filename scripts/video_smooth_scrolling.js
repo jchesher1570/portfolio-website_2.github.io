@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // CONFIG
     // ===============================
-    const itemHeight = videos[1].offsetTop - videos[0].offsetTop;
+    const itemHeight = videos[0].offsetHeight + (window.innerHeight * 0.4);
     const maxScroll = (videos.length - 1) * itemHeight;
     const snapToItem = (y) => {
         return Math.round(y / itemHeight) * itemHeight;
@@ -56,9 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let targetY = 0;
     let lastIndex = -1;
     let isFading = false;
-
-    // NEW
     let scrollDirection = 1;
+    let isInitialFrame = true;
 
     // ===============================
     // INITIALISE TALLY
@@ -140,56 +139,61 @@ document.addEventListener("DOMContentLoaded", () => {
     function animate() {
 
         targetY = snapToItem(
-            Math.max(0, Math.min(targetY, maxScroll))
-        );
+        Math.max(0, Math.min(targetY, maxScroll))
+    );
 
+    if (!isInitialFrame) {
         currentY += (targetY - currentY) * 0.15;
+    } else {
+        currentY = targetY;
+        isInitialFrame = false;
+    }
 
-        videoTrack.style.transform =
-            `translateY(calc(-${currentY}px + 76vh))`;
+    videoTrack.style.transform =
+        `translateY(calc(-${currentY}px + 76vh))`;
 
-        requestAnimationFrame(() => {
-            videoTrack.style.transition =
-                "transform 0.8s cubic-bezier(.22,.61,.36,1)";
+    const index = Math.min(
+        videos.length - 1,
+        Math.max(0, Math.round(currentY / itemHeight))
+    );
+
+    if (index !== lastIndex) {
+
+        lastIndex = index;
+        updateUI(index);
+
+        videos.forEach((v, i) => {
+            if (i === index) {
+                v.currentTime = 0;
+                v.play().catch(() => {});
+            } else {
+                v.pause();
+            }
         });
-        const index = Math.min(videos.length - 1, Math.max(0, Math.round(currentY / itemHeight)));
+    }
 
-        if (index !== lastIndex) {
-
-            lastIndex = index;
-
-            updateUI(index);
-
-            videos.forEach((v, i) => {
-
-                if (i === index) {
-
-                    v.currentTime = 0;
-
-                    v.play().catch(() => {});
-
-                } else {
-
-                    v.pause();
-
-                }
-
-            });
-        }
-
-        requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
     }
 
     // ===============================
     // INIT
     // ===============================
-    videos.forEach(v => {
-        v.play().catch(() => {});
-    });
+    requestAnimationFrame(() => {
+
+    videoTrack.style.transform =
+        `translateY(calc(0px + 76vh))`;
 
     updateUI(0, false);
     lastIndex = 0;
 
-    animate();
+    requestAnimationFrame(() => {
 
+        videoTrack.style.transition =
+            "transform 0.8s cubic-bezier(.22,.61,.36,1)";
+
+        animate();
+
+    });
+
+});
 });
