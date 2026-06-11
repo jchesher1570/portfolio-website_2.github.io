@@ -180,20 +180,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     requestAnimationFrame(() => {
 
-    videoTrack.style.transform =
-        `translateY(calc(0px + 76vh))`;
+        videoTrack.style.transform = `translateY(calc(0px + 76vh))`;
 
-    updateUI(0, false);
-    lastIndex = 0;
+        updateUI(0, false);
+        lastIndex = 0;
 
-    requestAnimationFrame(() => {
+        videos.forEach((v, i) => {
+            if (i === 0) {
+                v.currentTime = 0;
+                v.play().catch(() => {});
+            } else {
+                v.pause();
+            }
+        });
 
-        videoTrack.style.transition =
-            "transform 0.8s cubic-bezier(.22,.61,.36,1)";
+        requestAnimationFrame(() => {
 
-        animate();
+            videoTrack.style.transition = "transform 0.8s cubic-bezier(.22,.61,.36,1)";
+
+            animate();
+
+        });
 
     });
-
-});
 });
