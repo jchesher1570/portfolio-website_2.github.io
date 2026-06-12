@@ -17,7 +17,7 @@
   position: relative;
   display: inline-block;
   margin-left: 17.875rem;
-  margin-top: 8.25rem;
+  margin-top: 7.125rem;
   font-size: 2.5rem;
   font-family: 'PPNeueMontreal-Thin';
 }
@@ -52,4 +52,96 @@
 #github_link,
 #demo_link {
     text-decoration: none;
+}
+
+#zombie_summary {
+  margin-left: 17.875rem;
+  margin-top: 2.625rem;
+}
+
+.summary_subtitle {
+    font-size: 2rem;
+}
+
+.summary_lhs {
+  width: 40%;
+  height: 60vh;
+}
+
+#tools {
+  display: block;
+  justify-content: space-between; /* spreads them evenly across the width */
+  align-items: center;            /* keeps them aligned nicely */
+  margin-top: 1.25rem;
+}
+
+#tools-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4.25%;
+}
+
+#tools-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 1500%;        /* extend beyond text */
+  height: 1px;
+  background-color: rgba(var(--primary-text-rgb), 0.5);
+}
+
+.tools-headings {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#tools h3 {
+  flex: 1;
+  text-align: left;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  flex: 0 0 auto;
+
+  border: 1px solid rgba(var(--primary-text-rgb), 0.2);
+  color: var(--primary-text);
+
+  transition: border-color 0.4s ease,
+              color 0.4s ease,
+              background-color 0.4s ease;
+}
+
+.tool:hover {
+  border-color: rgba(var(--primary-text-rgb), 0.2);
+  color: var(--nav-bg);
+  background-color: var(--primary-text);
+}
+
+.tool i {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.tool span {
+  margin-top: 4px;   /* small gap under icon */
+  text-align: left;
+  font-size: 1rem;
+  position: relative;
+  top: 2px; /* 👈 subtle downward shift */
 }
