@@ -13,36 +13,43 @@
   font-family: 'PPNeueMontreal-Thin'
 }
 
-#projects-title {
+#project-title {
   position: relative;
   display: inline-block;
   margin-left: 17.875rem;
   margin-top: 8.25rem;
   font-size: 2.5rem;
-  font-family: 'PPNeueMontreal-Thin'
+  font-family: 'PPNeueMontreal-Thin';
 }
 
-#projects-title::after {
+#project-title::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 765%;        /* extend beyond text */
+  width: 765%;
   height: 1px;
   background-color: rgba(var(--primary-text-rgb), 0.5);
 }
 
-/* the tag */
-#projects-title .tag {
+.project-links {
   position: absolute;
-  right: -660%;   /* aligns with end of 422% underline */
-  bottom: 0;      /* sits just above the underline */
+  right: -660%;
+  bottom: 0;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-links .tag {
   font-size: 1.25rem;
   color: var(--primary-text);
   white-space: nowrap;
   font-family: "PPNeueMontreal-Thin";
 }
 
-#project_title {
-  margin-top: 2rem;
+#github_link,
+#demo_link {
+    text-decoration: none;
 }
