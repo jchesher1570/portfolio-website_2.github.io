@@ -148,4 +148,12 @@
 
 #duration_roles {
     margin-top: 3rem;
-}`
+    display: flex;
+    gap: 10rem; /* space between DURATION and ROLE */
+}
+
+#data_entry {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 16rem; /* space between DURATION and ROLE */
+}
