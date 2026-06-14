@@ -55,6 +55,10 @@
 }
 
 #zombie_summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6rem; /* space between columns */
   margin-left: 17.875rem;
   margin-top: 2.625rem;
 }
@@ -156,4 +160,9 @@
     margin-top: 0.5rem;
     display: flex;
     gap: 16rem; /* space between DURATION and ROLE */
+}
+
+.summary_rhs {
+    width: 60%;
+    margin-right: 6rem;
 }
