@@ -171,3 +171,23 @@
   margin-top: 1.25rem;
 }
 
+.gallery_carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#gallery_image {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.carousel_btn {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
