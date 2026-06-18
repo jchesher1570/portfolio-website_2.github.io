@@ -173,7 +173,6 @@
 
 .gallery_carousel {
     display: flex;
-    gap: 1rem;
     margin-top: 2.5rem;
 }
 
@@ -189,4 +188,5 @@
     cursor: pointer;
     background: none;
     border: none;
+  color: var(--primary-text);
 }
