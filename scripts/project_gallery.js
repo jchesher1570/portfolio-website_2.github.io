@@ -28,17 +28,16 @@ function updateImage() {
             slide.classList.add("current-slide");
         }
 
-        if (index === (currentIndex + 1) % slides.length) {
+        if (index === currentIndex + 1) {
             slide.classList.add("next-slide");
         }
 
-        if (
-            index ===
-            (currentIndex - 1 + slides.length) % slides.length
-        ) {
+        if (index === currentIndex - 1) {
             slide.classList.add("previous-slide");
         }
     });
+
+    updateButtons();
 }
 
 function getTrackOffset(index) {
@@ -49,23 +48,21 @@ function getTrackOffset(index) {
 }
 
 rightButton.addEventListener("click", () => {
-    currentIndex++;
 
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateImage();
     }
 
-    updateImage();
 });
 
 leftButton.addEventListener("click", () => {
-    currentIndex--;
 
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateImage();
     }
 
-    updateImage();
 });
 
 rightButton.addEventListener("mouseenter", () => {
@@ -97,3 +94,17 @@ function resetPreview() {
 
 leftButton.addEventListener("mouseleave", resetPreview);
 rightButton.addEventListener("mouseleave", resetPreview);
+
+function updateButtons() {
+
+    leftButton.style.visibility = "visible";
+    rightButton.style.visibility = "visible";
+
+    leftButton.style.display =
+        currentIndex === 0 ? "none" : "block";
+
+    rightButton.style.display =
+        currentIndex === images.length - 1 ? "none" : "block";
+}
+
+updateButtons();

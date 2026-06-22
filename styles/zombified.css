@@ -227,6 +227,13 @@
     z-index: 10;
 
     color: var(--primary-text);
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+
+.carousel_btn.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .carousel_btn svg path {
