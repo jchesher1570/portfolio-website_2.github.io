@@ -153,13 +153,13 @@
 #duration_roles {
     margin-top: 3rem;
     display: flex;
-    gap: 19rem; /* space between DURATION and ROLE */
+    gap: 20rem; /* space between DURATION and ROLE */
 }
 
 #data_entry {
     margin-top: 0.5rem;
     display: flex;
-    gap: 25rem; /* space between DURATION and ROLE */
+    gap: 26rem; /* space between DURATION and ROLE */
 }
 
 .gallery_carousel {
@@ -263,6 +263,29 @@
 
 #carousel_right {
     right: 10px;
+}
+
+.carousel_indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.carousel_indicator {
+    width: 10px;
+    height: 10px;
+
+    cursor: pointer;
+}
+
+.carousel_indicator circle {
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.carousel_indicator.active circle {
+    fill: currentColor;
 }
 
 .summary_rhs {

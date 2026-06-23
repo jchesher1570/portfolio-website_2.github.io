@@ -8,6 +8,7 @@ let currentIndex = 0;
 const track = document.querySelector(".gallery_track");
 const leftButton = document.getElementById("carousel_left");
 const rightButton = document.getElementById("carousel_right");
+const indicatorsContainer = document.querySelector(".carousel_indicators");
 
 function updateImage() {
 
@@ -38,6 +39,7 @@ function updateImage() {
     });
 
     updateButtons();
+    updateIndicators();
 }
 
 function getTrackOffset(index) {
@@ -107,4 +109,50 @@ function updateButtons() {
         currentIndex === images.length - 1 ? "none" : "block";
 }
 
-updateButtons();
+function createIndicators() {
+
+    indicatorsContainer.innerHTML = "";
+
+    images.forEach((_, index) => {
+
+        const indicator = document.createElement("div");
+
+        indicator.classList.add("carousel_indicator");
+
+        indicator.innerHTML = `
+            <svg viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="7" />
+            </svg>
+        `;
+
+        indicator.addEventListener("click", () => {
+
+            currentIndex = index;
+            updateImage();
+
+        });
+
+        indicatorsContainer.appendChild(indicator);
+
+    });
+
+}
+
+function updateIndicators() {
+
+    const indicators =
+        document.querySelectorAll(".carousel_indicator");
+
+    indicators.forEach((indicator, index) => {
+
+        indicator.classList.toggle(
+            "active",
+            index === currentIndex
+        );
+
+    });
+
+}
+
+createIndicators();
+updateImage();
