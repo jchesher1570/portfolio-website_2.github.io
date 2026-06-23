@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "2D Platformer",
         category: "Personal Project / Game Development",
         description: "A side-scrolling platform game featuring custom physics and AI.",
-        url: "./platformer.html"
+        url: "./2d_platformer.html"
     }
 ];
 
