@@ -288,8 +288,12 @@
 }
 
 .summary_rhs {
+     min-height: 68vh; /* or whatever matches the left-hand column */
     width: 68%;
     margin-right: 5.75rem;
+
+    display: flex;
+    flex-direction: column;
 }
 
 #summary_paragraph {
@@ -297,3 +301,24 @@
 }
 
 
+#next_project_links {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; /* Ensures the container spans the full page width */
+}
+
+.next_project_link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.next_project_link:hover .arrow {
+    transform: translateX(10px);
+}
