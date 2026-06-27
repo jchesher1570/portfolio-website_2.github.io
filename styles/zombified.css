@@ -17,7 +17,7 @@
   position: relative;
   display: inline-block;
   margin-left: 17.875rem;
-  margin-top: 6.75rem;
+  margin-top: 4rem;
   font-size: 2.5rem;
   font-family: 'PPNeueMontreal-Thin';
 }
@@ -58,9 +58,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 6rem; /* space between columns */
+    gap: 2rem; /* space between columns */
   margin-left: 17.875rem;
-  margin-top: 2.625rem;
 }
 
 .summary_subtitle {
@@ -68,7 +67,7 @@
 }
 
 .summary_lhs {
-  width: 45%;
+  width: 95%;
   height: 60vh;
 }
 
@@ -153,13 +152,13 @@
 #duration_roles {
     margin-top: 3rem;
     display: flex;
-    gap: 20rem; /* space between DURATION and ROLE */
+    gap: 25rem; /* space between DURATION and ROLE */
 }
 
 #data_entry {
     margin-top: 0.5rem;
     display: flex;
-    gap: 26rem; /* space between DURATION and ROLE */
+    gap: 31rem; /* space between DURATION and ROLE */
 }
 
 .gallery_carousel {
@@ -167,7 +166,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 #gallery_image {
@@ -177,7 +176,7 @@
 }
 
 .gallery_viewport {
-    width: 550px;
+    width: 700px;
     overflow: hidden;
     position:relative;
 }
@@ -199,8 +198,8 @@
 }
 
 .gallery_track img {
-    width: 550px;
-    height: 35vh;
+    width: 700px;
+    height: 45vh;
     flex-shrink: 0;
     object-fit: contain;
 
@@ -289,8 +288,8 @@
 }
 
 .summary_rhs {
-    width: 41%;
-    margin-right: 6rem;
+    width: 68%;
+    margin-right: 5.75rem;
 }
 
 #summary_paragraph {
