@@ -1,16 +1,24 @@
-.back_button {
-  margin-left: 17.875rem;
+#back_project_links {
   margin-top: 3.5rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--primary-text);
-  font-family: 'PPNeueMontreal-Thin'
+  margin-left: 17.875rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%; /* Ensures the container spans the full page width */
 }
 
-.back_button_link {
-  text-decoration: none;
-  color: var(--primary-text);
-  font-family: 'PPNeueMontreal-Thin'
+.back_project_link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.back_arrow {
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.back_project_link:hover .back_arrow {
+    transform: translateX(-10px);
 }
 
 #project-title {
