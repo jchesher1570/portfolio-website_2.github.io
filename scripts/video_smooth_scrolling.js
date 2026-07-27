@@ -1,5 +1,3 @@
-console.log("script loaded");
-
 document.addEventListener("DOMContentLoaded", () => {
 
     // ===============================
@@ -21,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectText = document.getElementById("project_text");
 
     const projectLink = document.getElementById("project_link");
+    const videoLink = document.getElementById("video_link");
 
     // ===============================
     // DATA
@@ -98,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         title.textContent = p.title;
         projectLink.href = p.url;
+        videoLink.href = p.url;
         category.textContent = p.category;
         paragraph.textContent = p.description;
 
