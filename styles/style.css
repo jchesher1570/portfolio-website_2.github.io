@@ -517,6 +517,16 @@ nav ul li {
   opacity: 1;
 }
 
+.nav_link.active::after,
+.nav_link_home.active::after {
+  transform: scaleX(1);
+}
+
+.nav_link:hover::after,
+.nav_link_home:hover::after {
+  transform: scaleX(1);
+}
+
 .nav_link::after {
   content: "";
 
