@@ -60,6 +60,16 @@
     text-decoration: none;
 }
 
+.arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+#demo_link:hover .arrow,
+#github_link:hover .arrow {
+    transform: translate(3px, -3px);
+}
+
 #zombie_summary {
     display: flex;
     align-items: flex-start;
