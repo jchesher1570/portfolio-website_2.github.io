@@ -1,12 +1,12 @@
 const images = [
-    "../images/zombie_start_screen.png",
+    "../images/zombie_start_screen_2.png",
     "../images/zombie_early_stage.png",
     "../images/zombie_action_screenshot.png",
     "../images/zombie_powerup_chase.png",
     "../images/zombie_blue_stage.png",
     "../images/zombie_yellow_stage.png",
     "../images/zombie_upwards_run.png",
-    "../images/zombie_death_screen.png"
+    "../images/zombie_death_screen_2.png"
 ];
 
 let currentIndex = 0;
