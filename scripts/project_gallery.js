@@ -1,6 +1,12 @@
 const images = [
-    "../images/laptop-android-zom.png",
-    "../images/gourmet_gossip.PNG"
+    "../images/zombie_start_screen.png",
+    "../images/zombie_early_stage.png",
+    "../images/zombie_action_screenshot.png",
+    "../images/zombie_powerup_chase.png",
+    "../images/zombie_blue_stage.png",
+    "../images/zombie_yellow_stage.png",
+    "../images/zombie_upwards_run.png",
+    "../images/zombie_death_screen.png"
 ];
 
 let currentIndex = 0;
