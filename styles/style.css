@@ -1002,6 +1002,14 @@ body.dark .knob {
   background-color: var(--primary-text);
 }
 
+.skill:hover #svg_skill path {
+    fill: var(--nav-bg);
+}
+
+#svg_skill:hover {
+    --primary-text: var(--nav-bg);
+}
+
 .skill i {
   font-size: 40px;
   line-height: 1;
