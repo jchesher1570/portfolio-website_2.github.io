@@ -133,9 +133,6 @@ Primary use: Portfolio Template
   --input-text: var(--primary-text);
   --input-placeholder: var(--muted-text);
 
-  --button-text: #d19361;
-  --button-text-hover: #faf4ef;
-
   --switch-bg: #f5f5f6;
   --switch-circle-bg: #ffd371;
   --switch-circle-pos: 0.15rem;
@@ -170,9 +167,6 @@ Primary use: Portfolio Template
   --input-placeholder: var(--muted-text);
   --input-nav-bg: #27252e;
 
-  --button-text: #d19361;
-  --button-text-hover: #faf4ef;
-
   --switch-bg: var(--input-bg);
   --switch-circle-bg: #7190ff;
   --switch-circle-pos: 2.22rem;
@@ -192,13 +186,6 @@ Primary use: Portfolio Template
   --link: var(--light-link);
   --hover: var(--light-hover);
 
-  /* Gentoo Icon Colours */
-  --gen-colour-1: #bebdf3;
-  --gen-colour-2: #867fb7;
-  --gen-colour-3: #524c76;
-  --gen-colour-4: #bebbdb;
-  --gen-colour-5: #928bbe;
-  --gen-colour-6: #9f99c7;
 }
 
 /* ============================================================== */
@@ -1087,5 +1074,4 @@ body.dark .knob {
   opacity: 1;
   transform: translateY(0);
 }
-
 
