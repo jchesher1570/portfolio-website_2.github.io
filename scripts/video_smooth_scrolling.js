@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectLink = document.getElementById("project_link");
     const videoLink = document.getElementById("video_link");
 
-    const test
-
     // ===============================
     // DATA
     // ===============================
