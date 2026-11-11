@@ -13,6 +13,69 @@
   align-items: center;
 }
 
+/* Scrollbar track */
+#project_scrollbar {
+    position: absolute;
+
+    /* Position scrollbar to the right of videos */
+    left: calc(100% + 20px);
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    /* 70% of viewport height */
+    height: 70vh;
+    width: 6px;
+
+    background-color: rgba(
+        var(--primary-text-rgb), 0.15
+    );
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+
+    z-index: 10;
+}
+
+/* Draggable thumb */
+#project_scrollbar_thumb {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20%;
+
+    background-color: var(--primary-text);
+
+    border-radius: 10px;
+
+    cursor: grab;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Thumb being dragged */
+#project_scrollbar_thumb:active {
+    cursor: grabbing;
+}
+
+/* Hover effect */
+#project_scrollbar:hover
+#project_scrollbar_thumb {
+    background-color: var(--primary-text);
+}
+
+/* Keyboard accessibility */
+#project_scrollbar:focus-visible {
+    outline: 2px solid var(--primary-text);
+    outline-offset: 6px;
+}
+
 .page_rhs {
   width: 40%;
   margin-left: 5%;
