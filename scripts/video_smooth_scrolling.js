@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectLink = document.getElementById("project_link");
     const videoLink = document.getElementById("video_link");
 
+    const scrollbar = document.getElementById("project_scrollbar");
+    const scrollbarThumb = document.getElementById("project_scrollbar_thumb");
+
     // ===============================
     // DATA
     // ===============================
@@ -68,18 +71,188 @@ document.addEventListener("DOMContentLoaded", () => {
     // WHEEL INPUT
     // ===============================
     window.addEventListener("wheel", (e) => {
-
+    
         e.preventDefault();
-
+    
+        if (isDraggingScrollbar || e.deltaY === 0) {
+            return;
+        }
+    
         scrollDirection = e.deltaY > 0 ? 1 : -1;
-
-        // move by 1 "page" per wheel tick
-        targetY += e.deltaY > 0 ? itemHeight : -itemHeight;
-
-        // snap immediately to grid
-        targetY = snapToItem(targetY);
-
+    
+        targetY += scrollDirection * itemHeight;
+    
+        targetY = snapToItem(
+            Math.max(
+                0,
+                Math.min(targetY, maxScroll)
+            )
+        );
+    
     }, { passive: false });
+
+    // ===============================
+    // SCROLLBAR STATE
+    // ===============================
+    
+    let isDraggingScrollbar = false;
+    
+    // Height of thumb as a percentage of track
+    const thumbHeightPercent = 20;
+    
+    scrollbarThumb.style.height =
+        `${thumbHeightPercent}%`;
+    
+    // Calculate available thumb travel
+    function getThumbTravel() {
+        return scrollbar.clientHeight -
+            scrollbarThumb.offsetHeight;
+    }
+
+    // ===============================
+    // UPDATE SCROLLBAR POSITION
+    // ===============================
+    
+    function updateScrollbar() {
+    
+        const progress = maxScroll > 0
+            ? Math.max(0, Math.min(currentY / maxScroll, 1))
+            : 0;
+    
+        const thumbTravel = getThumbTravel();
+    
+        const thumbY = progress * thumbTravel;
+    
+        scrollbarThumb.style.transform =
+            `translateY(${thumbY}px)`;
+    
+        const index = Math.min(
+            videos.length - 1,
+            Math.max(0, Math.round(currentY / itemHeight))
+        );
+    
+        scrollbar.setAttribute(
+            "aria-valuenow",
+            String(index + 1)
+        );
+    }
+
+    // ===============================
+    // SCROLLBAR INTERACTION
+    // ===============================
+    
+    // Convert pointer position into carousel position
+    function scrollToPointer(clientY) {
+    
+        const rect = scrollbar.getBoundingClientRect();
+    
+        const thumbTravel = getThumbTravel();
+    
+        if (thumbTravel <= 0 || maxScroll <= 0) {
+            return;
+        }
+    
+        // Centre thumb on pointer
+        let thumbY =
+            clientY - rect.top -
+            scrollbarThumb.offsetHeight / 2;
+    
+        thumbY = Math.max(
+            0,
+            Math.min(thumbY, thumbTravel)
+        );
+    
+        const progress = thumbY / thumbTravel;
+    
+        const newTargetY = snapToItem(
+            progress * maxScroll
+        );
+    
+        scrollDirection =
+            newTargetY >= targetY ? 1 : -1;
+    
+        targetY = Math.max(
+            0,
+            Math.min(newTargetY, maxScroll)
+        );
+    }
+    
+    // Begin dragging
+    scrollbar.addEventListener("pointerdown", (e) => {
+    
+        if (e.button !== 0) return;
+    
+        isDraggingScrollbar = true;
+    
+        scrollbar.setPointerCapture(e.pointerId);
+    
+        scrollToPointer(e.clientY);
+    
+        e.preventDefault();
+    });
+    
+    // Drag scrollbar
+    scrollbar.addEventListener("pointermove", (e) => {
+    
+        if (!isDraggingScrollbar) return;
+    
+        scrollToPointer(e.clientY);
+    });
+    
+    // Stop dragging
+    function stopScrollbarDrag() {
+        isDraggingScrollbar = false;
+    }
+    
+    scrollbar.addEventListener(
+        "pointerup",
+        stopScrollbarDrag
+    );
+    
+    scrollbar.addEventListener(
+        "pointercancel",
+        stopScrollbarDrag
+    );
+    
+    // Keyboard navigation
+    scrollbar.addEventListener("keydown", (e) => {
+    
+        let nextTarget = targetY;
+    
+        switch (e.key) {
+            case "ArrowDown":
+            case "PageDown":
+                nextTarget += itemHeight;
+                break;
+    
+            case "ArrowUp":
+            case "PageUp":
+                nextTarget -= itemHeight;
+                break;
+    
+            case "Home":
+                nextTarget = 0;
+                break;
+    
+            case "End":
+                nextTarget = maxScroll;
+                break;
+    
+            default:
+                return;
+        }
+    
+        e.preventDefault();
+    
+        scrollDirection =
+            nextTarget >= targetY ? 1 : -1;
+    
+        targetY = Math.max(
+            0,
+            Math.min(nextTarget, maxScroll)
+        );
+    });
+
 
     // ===============================
     // UI
@@ -149,8 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
         isInitialFrame = false;
     }
 
-    videoTrack.style.transform =
-        `translateY(calc(-${currentY}px + 76vh))`;
+    videoTrack.style.transform =`translateY(calc(-${currentY}px + 76vh))`;
+
+    // Synchronise scrollbar with video position
+    updateScrollbar();
 
     const index = Math.min(
         videos.length - 1,

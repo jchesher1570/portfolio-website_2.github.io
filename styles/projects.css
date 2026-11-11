@@ -17,13 +17,14 @@
 #project_scrollbar {
     position: absolute;
 
-    /* Position scrollbar to the right of videos */
-    left: calc(100% + 20px);
+    /* Position at far right of page_rhs */
+    right: 0;
 
+    /* Vertically centre the scrollbar */
     top: 50%;
     transform: translateY(-50%);
 
-    /* 70% of viewport height */
+    /* Scrollbar dimensions */
     height: 70vh;
     width: 6px;
 
@@ -77,6 +78,7 @@
 }
 
 .page_rhs {
+  position: relative;
   width: 40%;
   margin-left: 5%;
   display: flex;
