@@ -16,17 +16,18 @@
 /* Scrollbar track */
 #project_scrollbar {
     position: absolute;
+    margin-right: 3px;
 
     /* Position at far right of page_rhs */
     right: 0;
 
     /* Vertically centre the scrollbar */
-    top: 50%;
+    top: 54%;
     transform: translateY(-50%);
 
     /* Scrollbar dimensions */
-    height: 70vh;
-    width: 6px;
+    height: 91vh;
+    width: 12px;
 
     background-color: rgba(
         var(--primary-text-rgb), 0.15
