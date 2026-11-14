@@ -177,12 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
     
-    // Begin dragging
     scrollbar.addEventListener("pointerdown", (e) => {
     
         if (e.button !== 0) return;
     
         isDraggingScrollbar = true;
+    
+        // Turn thumb blue while dragging
+        scrollbar.classList.add("dragging");
     
         scrollbar.setPointerCapture(e.pointerId);
     
@@ -201,19 +203,18 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Stop dragging
     function stopScrollbarDrag() {
+    
         isDraggingScrollbar = false;
+    
+        // Restore default thumb colour
+        scrollbar.classList.remove("dragging");
     }
     
-    scrollbar.addEventListener(
-        "pointerup",
-        stopScrollbarDrag
-    );
-    
-    scrollbar.addEventListener(
-        "pointercancel",
-        stopScrollbarDrag
-    );
-    
+    // Release events
+    scrollbar.addEventListener("pointerup", stopScrollbarDrag);
+    scrollbar.addEventListener("pointercancel", stopScrollbarDrag);
+    scrollbar.addEventListener("lostpointercapture", stopScrollbarDrag);
+
     // Keyboard navigation
     scrollbar.addEventListener("keydown", (e) => {
     
