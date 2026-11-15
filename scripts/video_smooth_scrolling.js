@@ -94,41 +94,44 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // SCROLLBAR STATE
     // ===============================
-    
     let isDraggingScrollbar = false;
     
     // Height of thumb as a percentage of track
-    const thumbHeightPercent = 20;
+    const thumbHeightPercent = 19;
     
-    scrollbarThumb.style.height =
-        `${thumbHeightPercent}%`;
+    const thumbInset = 2;
+
+    scrollbarThumb.style.height = `${thumbHeightPercent}%`;
     
     // Calculate available thumb travel
     function getThumbTravel() {
-        return scrollbar.clientHeight -
-            scrollbarThumb.offsetHeight;
+        return Math.max(0, scrollbar.clientHeight - scrollbarThumb.offsetHeight - (thumbInset * 2));
     }
 
     // ===============================
     // UPDATE SCROLLBAR POSITION
     // ===============================
-    
     function updateScrollbar() {
     
         const progress = maxScroll > 0
-            ? Math.max(0, Math.min(currentY / maxScroll, 1))
+            ? Math.max(
+                0,
+                Math.min(currentY / maxScroll, 1)
+            )
             : 0;
     
         const thumbTravel = getThumbTravel();
     
-        const thumbY = progress * thumbTravel;
+        const thumbY = thumbInset + (progress * thumbTravel);
     
-        scrollbarThumb.style.transform =
-            `translateY(${thumbY}px)`;
+        scrollbarThumb.style.transform = `translateY(${thumbY}px)`;
     
         const index = Math.min(
             videos.length - 1,
-            Math.max(0, Math.round(currentY / itemHeight))
+            Math.max(
+                0,
+                Math.round(currentY / itemHeight)
+            )
         );
     
         scrollbar.setAttribute(
@@ -140,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // SCROLLBAR INTERACTION
     // ===============================
-    
+
     // Convert pointer position into carousel position
     function scrollToPointer(clientY) {
     
@@ -152,10 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
     
-        // Centre thumb on pointer
+        // Account for vertical margin
         let thumbY =
-            clientY - rect.top -
-            scrollbarThumb.offsetHeight / 2;
+            clientY -
+            rect.top -
+            scrollbarThumb.offsetHeight / 2 -
+            thumbInset;
     
         thumbY = Math.max(
             0,
@@ -176,6 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
             Math.min(newTargetY, maxScroll)
         );
     }
+
     
     scrollbar.addEventListener("pointerdown", (e) => {
     

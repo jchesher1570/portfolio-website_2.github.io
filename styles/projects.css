@@ -13,71 +13,110 @@
   align-items: center;
 }
 
-
 /* =========================================
    PROJECT CAROUSEL SCROLLBAR
    ========================================= */
-
-/* Scrollbar track */
 #project_scrollbar {
     position: absolute;
-    margin-right: 4rem;
 
-    /* Anchor scrollbar to right edge */
+    /* Preserve current positioning */
     right: 0;
-    left: auto;
-
-    /* Vertically centre scrollbar */
+    margin-right: 4rem;
     top: 52%;
     transform: translateY(-50%);
 
-    /* Scrollbar dimensions */
+    /* Invisible interactive region */
+    width: 18px;
     height: 80vh;
-    width: 4px;
 
-    background-color: rgba(var(--primary-text-rgb), 0.15);
-    border-radius: 0;
+    background: transparent;
 
     cursor: pointer;
     touch-action: none;
     user-select: none;
     z-index: 10;
 
-    /* Smooth expansion */
+    /* Vertical inset for the thumb */
+    --thumb-inset: 4px;
+}
+
+/* Visible scrollbar track */
+#project_scrollbar::before {
+    content: "";
+
+    position: absolute;
+
+    /* Anchor to the right edge */
+    right: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background-color: rgba(
+        var(--primary-text-rgb), 0.15
+    );
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
     transition: width 0.1s ease;
+}
+
+/* Expand visible track to the LEFT */
+#project_scrollbar:hover::before,
+#project_scrollbar.dragging::before {
+    width: 12px;
 }
 
 /* Draggable thumb */
 #project_scrollbar_thumb {
     position: absolute;
 
+    /* JavaScript handles vertical positioning */
     top: 0;
-    left: 0;
 
-    /* Fill the width of the track */
-    width: 100%;
-    height: 20%;
+    /* Centre thumb within visible track */
+    right: 0;
+    left: auto;
+
+    /* Default track is 4px wide */
+    width: 2.68px;
+
+    /* Height controlled by JavaScript */
+    height: 19%;
 
     background-color: var(--primary-text);
-    border-radius: 0;
+    border-radius: 10px;
 
     cursor: pointer;
 
-    /* Smooth colour transition */
-    transition: background-color 0.1s ease;
+    /* Centre thumb within 4px track */
+    margin-right: 0.66px;
+
+    transition:
+        width 0.1s ease,
+        margin-right 0.1s ease,
+        background-color 0.1s ease;
 }
 
-/* Expand entire scrollbar to the LEFT on hover */
-#project_scrollbar:hover {
-    width: 12px;
+/* Narrow thumb when not hovering */
+#project_scrollbar:not(:hover):not(.dragging)
+#project_scrollbar_thumb {
+    width: 2.68px;
 }
 
-/* Keep scrollbar expanded while dragging */
-#project_scrollbar.dragging {
-    width: 12px;
+/* Expanded track and thumb */
+#project_scrollbar:hover #project_scrollbar_thumb,
+#project_scrollbar.dragging #project_scrollbar_thumb {
+    width: 8px;
+
+    /* Centre thumb within 12px track */
+    margin-right: 2px;
 }
 
-/* Blue thumb ONLY while dragging */
+/* Blue only while dragging */
 #project_scrollbar.dragging #project_scrollbar_thumb {
     background-color: #007bff;
     cursor: grabbing;
@@ -86,9 +125,8 @@
 /* Keyboard accessibility */
 #project_scrollbar:focus-visible {
     outline: 2px solid var(--primary-text);
-    outline-offset: 6px;
+    outline-offset: 4px;
 }
-
 
 .page_rhs {
   position: relative;
