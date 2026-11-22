@@ -1714,3 +1714,114 @@ body.dark .track { fill: var(--track-on); } body.dark .knob { transform: transla
     }
 }
 
+
+
+
+
+
+/* =====================================================
+   TABLET AND MOBILE SKILLS LAYOUT
+   ===================================================== */
+
+@media (max-width: 1199px) {
+
+    /* Stack all three categories vertically */
+    .skills-columns {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3rem;
+        width: 100%;
+    }
+
+    /* Each category occupies its own row */
+    .skills-column,
+    .skills-column:last-child {
+        grid-column: 1 / -1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Category headings */
+    .skills-column h3 {
+        margin-bottom: 1.5rem;
+        font-size: clamp(1.4rem, 3vw, 1.75rem);
+        line-height: 1.2;
+    }
+
+    /* Arrange badges horizontally and wrap */
+    .skills-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    /* Preserve existing skill badge styling */
+    .skill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 0 auto;
+        max-width: 100%;
+
+        gap: 0.5rem;
+        padding: 0.4rem 0.65rem;
+    }
+
+    /* Keep the projects link aligned right */
+    #external_links {
+        display: flex;
+        justify-content: flex-end;
+
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+
+
+/* =====================================================
+   MOBILE SKILLS ADJUSTMENTS
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .skills-columns {
+        gap: 2.75rem;
+    }
+
+    .skills-column h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .skills-grid {
+        gap: 0.65rem;
+    }
+
+    .skill {
+        gap: 0.4rem;
+        padding: 0.35rem 0.55rem;
+    }
+
+    .skill i {
+        font-size: 1.75rem;
+    }
+
+    .skill span {
+        font-size: 0.875rem;
+    }
+
+    #external_links {
+        margin-top: 4rem;
+    }
+}
+
