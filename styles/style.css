@@ -217,6 +217,89 @@ Primary use: Portfolio Template
 /* Define styles for different screen sizes */
 /* ================================================= */
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root { --sidebar-width: 10rem; --content-start: 12rem; --content-end: 2rem; --fs-h1: clamp(3.5rem,7.2vw,6.75rem); }
+  #nav-menu { margin-top: 4rem; }
+  .nav_link_home, .nav_link { padding-left: 2rem; }
+  .nav_link::after, .nav_link_home::after { left: 2rem; width: calc(100% - 2rem); }
+  .social-list_link { margin-left: 1.5rem; }
+  #hero { padding-top: 8rem; }
+  #about-me { margin-top: 4rem; }
+  .skills-columns { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .skills-column:last-child { grid-column: 1 / -1; }
+}
+
+/* Mobile: use the hamburger already present in the HTML */
+@media (max-width: 767px) {
+  :root {
+    --sidebar-width: 0rem; --content-start: 1.5rem; --content-end: 1.5rem;
+    --fs-h1: clamp(2.65rem, 10.5vw, 5rem); --fs-h2: clamp(1.25rem,4vw,1.75rem);
+    --fs-body: 1rem; --section-gap: 5rem;
+  }
+  header, header.sticky { width: 100%; min-height: 3.75rem; background: var(--nav-bg); box-shadow: none; }
+  #nav-container { width: 100%; }
+  .nav-toggle {
+    position: absolute; display: block; top: .9rem; left: 1.25rem; right: auto;
+    z-index: 1100; width: 2rem; height: 2rem; cursor: pointer;
+    color: var(--primary-text); fill: var(--primary-text);
+  }
+  .navIcon { fill: currentColor; }
+  .nav-btn { display: block; }
+  /* Existing JS may toggle .open on nav or on the nav container. */
+  header nav { height: 0; width: 100%; overflow: hidden; background: var(--nav-bg); transition: height .25s ease; }
+  header nav.open, #nav-container.open nav { height: 21rem; overflow-y: auto; }
+  #nav-menu { display: flex; flex-direction: column; width: 100%; height: auto; gap: 0; margin: 3.75rem 0 0; padding: 0; }
+  header nav ul li { display: block; width: 100%; background: var(--mob-nav-bg); border-bottom: 1px solid var(--mob-nav-border); }
+  header nav ul li a { display: block; width: 100%; padding: .6rem 1.5rem; line-height: 1.7; color: var(--mob-nav-text); }
+  .nav_link_home, .nav_link { opacity: .7; }
+  .nav_link_home.active, .nav_link.active { opacity: 1; }
+  .nav_link::after, .nav_link_home::after { display: none; }
+  .social-list { flex-direction: row; gap: .5rem; margin: .8rem 0 0; padding: 0 1rem; }
+  .social-list li { width: auto; background: transparent; border: 0; }
+  .social-list_link { width: 2.75rem; height: 2.75rem; margin: 0; color: var(--primary-text); }
+  #logo-link { display: none; }
+  #theme-switcher_wrapper, #theme-switcher_wrapper.visible { z-index: 1050; height: 3.75rem; }
+  #theme-switcher { margin-right: 1rem; }
+  #hero { padding-top: 8rem; }
+  #hero h1 { font-size: var(--fs-h1); }
+  #hero h2 { margin-top: .75rem; }
+  .about-me-wrapper { display: block; padding: 0 var(--content-end) 0 var(--content-start); }
+  #about-me { width: 100%; margin-top: 5rem; }
+  .contact-wrapper { margin-top: 3rem; }
+  .motivation-wrapper { display: block; margin-top: 5rem; }
+  #motivation { width: 100%; }
+  .hs-title { font-size: clamp(1.5rem,5vw,2rem); margin-bottom: 2.5rem; }
+  #skills { margin-top: 5rem; }
+  .skills-columns { grid-template-columns: minmax(0,1fr); gap: 2.75rem; }
+  .skills-column:last-child { grid-column: auto; }
+  #skills h3, .skills-column h3 { font-size: 1.5rem; }
+  .skill i { font-size: 2rem; }
+  .skill span { font-size: .875rem; }
+  #external_links { margin-top: 4rem; padding-bottom: 3rem; }
+}
+
+@media (max-width: 390px) {
+  :root { --content-start: 1rem; --content-end: 1rem; --fs-h1: clamp(2.15rem, 9.5vw, 3.5rem); }
+  .skill { gap: 4px; padding: 5px 7px; }
+  .skill i { font-size: 1.75rem; }
+  .skill svg { max-width: 2rem; max-height: 2rem; }
+}
+
+/* Short screens: don't let desktop sidebar run into the bottom logo */
+@media (min-width: 768px) and (max-height: 650px) {
+  #nav-menu { margin-top: 2rem; }
+  .social-list { margin-top: 2rem; gap: .25rem; }
+  #logo-link { width: 7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; }
+  .fade-in { opacity: 1; transform: none; }
+  .letter { opacity: 1; transform: none; }
+}
+
 /* ================================================= */
 /* General styles */
 /* ================================================= */
@@ -339,14 +422,15 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-
     width: auto;
     height: auto;
-
     z-index: 1000;
-
     display: flex;
     flex-direction: column;
+
+  /* New Code */
+    inset: 0 auto auto 0;
+    width: var(--sidebar-width);
 }
 
 header.sticky {
@@ -393,7 +477,7 @@ nav {
 
 nav ul li {
   display: inline-block;
-  font-family: "PPNeueMontreal-Book";
+  font-family: "PPNeueMontreal-Book", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: --fw-bold;
 }
@@ -406,7 +490,6 @@ nav ul li {
   padding-left: 4rem;
   text-decoration: none;
   color: var(--primary-text);
-
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
@@ -434,20 +517,15 @@ nav ul li {
 }
 
 .nav_link::after {
-  content: "";
-
+  content: '';
   position: absolute;
   left: 4rem;
   bottom: -2px;
-
   width: 8.5rem;
   height: 1px;
-
   background: var(--primary-text);
-
   transform: scaleX(0);
   transform-origin: left;
-
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -455,62 +533,57 @@ nav ul li {
   transform: scaleX(1);
 }
 
+  /* New Code */
+section, .skill, .social-list_link, .nav_link, .external_link, #logo, .link-icon { backface-visibility: hidden; }
+.hidden { display: none !important; }
+
 /* ================================================= */
 /* Social List */
 /* ================================================= */
 
 .social-list {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   list-style: none;
   padding: 0;
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 
 .social-list_link {
-     position: relative;
-    height: 3rem;
-    width: 3rem;
-     border-radius: 50%;
-
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0rem 1rem 0rem 4rem;
-    transition: background 0.3s;
-    text-decoration: none;
-    overflow: hidden;
-    color: var(--primary-text);
-
-    transition:
-      color 0.35s ease,
-      transform 0.35s ease;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1rem 0rem 4rem;
+  transition: background 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  color: var(--primary-text);
+  transition:
+  color 0.35s ease,
+  transform 0.35s ease;
 }
 
 /* Expanding circular background */
 .social-list_link::before {
   content: "";
   position: absolute;
-
   inset: 0;
-
   border-radius: 50%;
-    color: var(--nav-bg);
+  color: var(--nav-bg);
   background: var(--primary-text);
-
   transform: scale(0);
   transform-origin: center;
-
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-
-  z-index: 0;
 }
 
 /* Keep icon above animated background */
 .social-list_link .link-icon {
   position: relative;
-  z-index: 1000;
   font-size: 1.5rem;
 }
 
@@ -521,7 +594,7 @@ nav ul li {
 
 /* Change icon colour on hover */
 .social-list_link:hover {
-    color: var(--nav-bg);
+  color: var(--nav-bg);
   transform: translateY(-3px);
 }
 
@@ -534,6 +607,9 @@ nav ul li {
   padding: 0.75rem;
   animation: fadeIn 1s ease-out;
 }
+
+/* New Code */
+/* #logo { display: block; width: 100%; height: auto; padding: .75rem; animation: fadeIn 1s ease-out; } */
 
 #text111, #rect515 {
   color: var(--primary-text);
@@ -655,6 +731,15 @@ body.dark .knob {
   transform: scale(0.9);
 }
 
+/* New Code */
+#theme-switcher svg { position: relative; z-index: 1; margin-left: auto; transition: var(--default-transition); }
+#icon-sun { fill: var(--icon-sun); } #icon-moon { fill: var(--icon-moon); }
+.icon { pointer-events: none; }
+body.dark .sun { display: none; } body:not(.dark) .moon { display: none; }
+.knob { fill: var(--knob); transition: transform .3s cubic-bezier(.4,0,.2,1); }
+body.dark .track { fill: var(--track-on); } body.dark .knob { transform: translateX(30px); }
+#theme-switch:active .knob { transform: scale(.9); }
+
 /* ================================================= */
 /* Hero */
 /* ================================================= */
@@ -667,7 +752,7 @@ body.dark .knob {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  font-family: "PPNeueMontreal-Hairline";
+  font-family: "PPNeueMontreal-Hairline", Arial, sans-serif;
   padding-top: 9rem;
   margin-left: 19rem;
 }
@@ -701,7 +786,7 @@ body.dark .knob {
 
 #hero h2 {
   text-align: left;
-  font-family: "PPNeueMontreal-Thin";
+  font-family: "PPNeueMontreal-Thin", Arial, sans-serif;
   padding-right: 12.5rem;
   margin-left: 19.5rem;
   opacity: 0;
@@ -755,6 +840,9 @@ body.dark .knob {
   word-wrap: break-word; /* Ensures long words don't overflow */
   text-align: left;
   display: block;
+
+  /* New Code */
+  overflow-wrap: anywhere;
 }
 
 /* ================================================= */
@@ -777,6 +865,9 @@ body.dark .knob {
   opacity: 0;
   animation: fadeIn 0.7s ease forwards;
   animation-delay: 0.4s; /* delay before appearing */
+
+  /* New Code */
+  overflow-wrap: anywhere;
 }
 
 /* ================================================= */
@@ -821,6 +912,9 @@ body.dark .knob {
   word-wrap: break-word; /* Ensures long words don't overflow */
   text-align: left;
   display: block;
+
+  /* New Code */
+  overflow-wrap: anywhere;
 }
 
 /* ================================================= */
@@ -843,7 +937,7 @@ body.dark .knob {
 }
 
 #skills-title::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -888,12 +982,9 @@ body.dark .knob {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-
   padding: 6px 10px;
   border-radius: 10px;
-
   flex: 0 0 auto;
-
   border: 1px solid rgba(var(--primary-text-rgb), 0.2);
   color: var(--primary-text);
 
@@ -923,6 +1014,9 @@ body.dark .knob {
   font-size: 1rem;
   position: relative;
   top: 2px; /* 👈 subtle downward shift */
+
+  /* New Code */
+  overflow-wrap: anywhere;
 }
 
 #gentoo_logo {
