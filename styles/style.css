@@ -402,6 +402,16 @@ h4 {
   font-size: var(--fs-h4);
 }
 
+
+h1,h2,h3,h4 { font-family: 'PPNeueMontreal-Thin', Arial, sans-serif; font-weight: var(--fw-reg); line-height: 1; }
+h1 { font-size: var(--fs-h1); } h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); } h4 { font-size: var(--fs-h4); }
+.hs-title { font-family: 'PPNeueMontreal-Thin', Arial, sans-serif; font-weight: var(--fw-reg); margin-bottom: 3rem; }
+:focus-visible { outline: 2px solid var(--primary-text); outline-offset: 4px; }
+section, .skill, .social-list_link, .nav_link, .external_link, #logo, .link-icon { backface-visibility: hidden; }
+.hidden { display: none !important; }
+
+
 /* ================================================= */
 /* Header & Nav Bar */
 /* ================================================= */
@@ -1037,18 +1047,6 @@ body.dark .knob {
 .external_link:hover .arrow {
     transform: translateX(10px);
 }
-
-/* ================================================= */
-/* Experience */
-/* ================================================= */
-
-/* ================================================= */
-/* Interests */
-/* ================================================= */
-
-/* ================================================= */
-/* Footer */
-/* ================================================= */
 
 @keyframes fadeInPage {
   to {
