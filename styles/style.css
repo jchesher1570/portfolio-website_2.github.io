@@ -101,7 +101,7 @@ Primary use: Portfolio Template
   --primary-text: #3C3A47;
   --muted-text: #B1B0B5;
 
-  --primary-font: 'PPNeueMontreal-Thin';
+  --primary-font: 'PPNeueMontreal-Thin', Arial, sans-serif;
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -118,6 +118,13 @@ Primary use: Portfolio Template
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0px;
+
+  /* New Code */
+  --sidebar-width: 15rem;
+  --page-gutter: clamp(1.25rem, 3.2vw, 3.5rem);
+  --content-start: calc(var(--sidebar-width) + 2rem);
+  --content-end: var(--page-gutter);
+  --section-gap: clamp(5rem, 12vh, 9rem);
 }
 
 :root[data-theme="light"] {
@@ -185,7 +192,6 @@ Primary use: Portfolio Template
   --primary: var(--light-primary);
   --link: var(--light-link);
   --hover: var(--light-hover);
-
 }
 
 /* ============================================================== */
@@ -211,99 +217,6 @@ Primary use: Portfolio Template
 /* Define styles for different screen sizes */
 /* ================================================= */
 
-@media all and (max-width: 830px) {
-  #sidemenu {
-    padding-top: 0.25rem;
-    padding-left: 0.8rem;
-  }
-  #logo-link {
-    width: 10rem;
-    margin-bottom: 3%;
-  }
-  .nav-logo {
-    height: 3.75rem;
-  }
-  header nav {
-    height: 0;
-    width: 20%;
-    overflow: hidden;
-    transition: 250ms height ease-in-out;
-  }
-  header nav ul {
-    flex-direction: row;
-  }
-  body header.sticky nav ul {
-    padding: 0 1rem;
-  }
-  .nav-btn {
-    display: block;
-  }
-  header nav ul li {
-    height: 3rem;
-    display: block;
-    background: var(--mob-nav-bg);
-    border-style: solid;
-    border-width: thin;
-    border-color: var(--mob-nav-border);
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    font-family: 'PPNeueMontreal-Book'; 
-  }
-  header nav ul li:hover {
-    background: var(--primary-text);
-    color: var(--page-bg);
-    transition: var(--default-transition);
-    cursor: pointer;
-  }
-  header nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 0 0 0 0.625rem;
-    color: var(--mob-nav-text);
-    line-height: 2.7;
-  }
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    fill: var(--primary-text);
-    color: var(--primary-text);
-  }
-  .navIcon line {
-    stroke: var(--primary-text);;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  body #hero h1 {
-    padding-top: 9rem;
-    padding-right: 2rem;
-    padding-left: 1.5rem;
-  }
-  body #hero h2 {
-    padding-right: 4rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  body #hero {
-    height: 36rem;
-  }
-  body #hero .arrows-body {
-    padding-top: 6rem;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  body #hero h2{
-    font-size: 1.625rem;
-    padding-top: 0.25rem;
-    padding-right: 7.25rem;
-  }
-}
-
 /* ================================================= */
 /* General styles */
 /* ================================================= */
@@ -311,7 +224,6 @@ Primary use: Portfolio Template
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-
   text-rendering: optimizeLegibility;
 }
 
@@ -330,6 +242,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;
+
+  /* New Code */
+  min-width: 0; min-height: 100vh; 
+  overflow-wrap: break-word; transition: background-color .3s ease, color .3s ease;
 }
 
 body::before {
@@ -337,7 +253,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  content: "";
+  content: '';
   position: fixed;
   z-index: -1;
   top: 0px;
@@ -345,6 +261,10 @@ body::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
+
+  /* New Code */
+  inset: 0; pointer-events: none;
+  background: url('../images/bg-texture.png') no-repeat center center / cover;
 }
 
 .hs-title {
@@ -380,10 +300,9 @@ h1,
 h2,
 h3, 
 h4 {
-  font-family: "PPNeueMontreal-Thin";
-  font-weight: --fw-bold;
+  font-family: "PPNeueMontreal-Thin", Arial, sans-serif;
+  font-weight: var(--fw-reg);
   line-height: 1;
-  margin: 0;
 }
 
 h1 {
@@ -401,16 +320,6 @@ h3 {
 h4 {
   font-size: var(--fs-h4);
 }
-
-
-h1,h2,h3,h4 { font-family: 'PPNeueMontreal-Thin', Arial, sans-serif; font-weight: var(--fw-reg); line-height: 1; }
-h1 { font-size: var(--fs-h1); } h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); } h4 { font-size: var(--fs-h4); }
-.hs-title { font-family: 'PPNeueMontreal-Thin', Arial, sans-serif; font-weight: var(--fw-reg); margin-bottom: 3rem; }
-:focus-visible { outline: 2px solid var(--primary-text); outline-offset: 4px; }
-section, .skill, .social-list_link, .nav_link, .external_link, #logo, .link-icon { backface-visibility: hidden; }
-.hidden { display: none !important; }
-
 
 /* ================================================= */
 /* Header & Nav Bar */
