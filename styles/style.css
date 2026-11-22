@@ -1076,3 +1076,641 @@ body.dark .track { fill: var(--track-on); } body.dark .knob { transform: transla
   transform: translateY(0);
 }
 
+
+
+/* =====================================================
+   TABLET AND MOBILE - FIXED TOP NAVIGATION
+   Applies at 1199px and below
+   ===================================================== */
+
+@media (max-width: 1199px) {
+
+    :root {
+        --top-nav-height: 3.5rem;
+        --content-gutter: clamp(1.25rem, 5vw, 5rem);
+        --fs-h1: clamp(3.5rem, 8vw, 6.5rem);
+        --fs-body: 1rem;
+    }
+
+    html {
+        scroll-padding-top: calc(var(--top-nav-height) + 1rem);
+    }
+
+    body {
+        overflow-x: clip;
+    }
+
+    /* -----------------------------------------
+       Fixed horizontal navigation
+       ----------------------------------------- */
+
+    header,
+    header.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        height: var(--top-nav-height);
+
+        display: block;
+
+        background: var(--nav-bg);
+        border-bottom: 1px solid
+            rgba(var(--primary-text-rgb), 0.3);
+
+        box-shadow: none;
+        filter: none;
+
+        z-index: 1000;
+    }
+
+    #nav-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* No hamburger menu */
+    .nav-toggle,
+    .nav-btn {
+        display: none !important;
+    }
+
+    /* Override collapsed mobile navigation */
+    header nav,
+    header nav.open,
+    #nav-container.open nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+
+        padding: 0 var(--content-gutter);
+        margin: 0;
+
+        overflow: visible;
+        background: transparent;
+    }
+
+    /* -----------------------------------------
+       Navigation links - left side
+       ----------------------------------------- */
+
+    #nav-menu,
+    header.sticky #nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: auto;
+        height: 100%;
+
+        gap: clamp(0.75rem, 2vw, 1.75rem);
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    #nav-menu .nav_item,
+    header nav ul li {
+        display: flex;
+        align-items: center;
+
+        width: auto;
+        height: 100%;
+
+        padding: 0;
+        margin: 0;
+
+        border: 0;
+        background: transparent;
+    }
+
+    .nav_link_home,
+    .nav_link,
+    header nav ul li a {
+        display: inline-flex;
+        align-items: center;
+
+        width: auto;
+        height: 100%;
+
+        padding: 0;
+        margin: 0;
+
+        color: var(--primary-text);
+        background: transparent;
+
+        font-size: 0.8rem;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+
+        opacity: 0.5;
+        white-space: nowrap;
+    }
+
+    .nav_link_home.active,
+    .nav_link.active,
+    .nav_link_home:hover,
+    .nav_link:hover {
+        opacity: 1;
+    }
+
+    .nav_link::after,
+    .nav_link_home::after {
+        display: none;
+    }
+
+    /* -----------------------------------------
+       Social icons - right side
+       ----------------------------------------- */
+
+    .social-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: auto;
+        height: 100%;
+
+        gap: 0.4rem;
+
+        padding: 0;
+        margin: 0 0 0 auto;
+
+        list-style: none;
+    }
+
+    .social-list_item {
+        display: flex;
+        align-items: center;
+
+        width: auto;
+        height: auto;
+
+        background: transparent;
+        border: 0;
+    }
+
+    .social-list_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2rem;
+        height: 2rem;
+
+        padding: 0;
+        margin: 0;
+
+        color: var(--primary-text);
+        border-radius: 50%;
+    }
+
+    .social-list_link .link-icon {
+        font-size: 0.95rem;
+        line-height: 1;
+    }
+
+    /* Hide the desktop bottom-left logo */
+    #logo-link {
+        display: none;
+    }
+
+    /* -----------------------------------------
+       Theme switcher
+       Positioned below navigation
+       ----------------------------------------- */
+
+    #theme-switcher_wrapper,
+    #theme-switcher_wrapper.visible {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 3.5rem;
+
+        margin-top: var(--top-nav-height);
+
+        border: 0;
+        background: transparent;
+
+        z-index: 1;
+    }
+
+    #theme-switcher {
+        margin: 0;
+    }
+
+    /* -----------------------------------------
+       Hero section
+       ----------------------------------------- */
+
+    #hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        padding:
+            clamp(3rem, 8vw, 5rem)
+            var(--content-gutter)
+            0;
+
+        margin: 0;
+    }
+
+    #hero h1 {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        font-size: var(--fs-h1);
+        line-height: 0.98;
+        font-weight: 300;
+
+        overflow: visible;
+    }
+
+    #hero h2 {
+        width: 100%;
+
+        margin: 0.4rem 0 0;
+        padding: 0;
+
+        font-size: clamp(1rem, 2.4vw, 1.5rem);
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    .name-line {
+        max-width: 100%;
+    }
+
+    /* -----------------------------------------
+       Contact - directly below hero
+       ----------------------------------------- */
+
+    .contact-wrapper {
+        display: block;
+
+        width: 100%;
+
+        margin: clamp(4rem, 10vw, 6rem) 0 0;
+        padding: 0 var(--content-gutter);
+    }
+
+    #contact {
+        width: 100%;
+        max-width: 44rem;
+    }
+
+    #contact-p1,
+    #contact-p2 {
+        margin: 0;
+        padding: 0;
+
+        font-size: var(--fs-body);
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* -----------------------------------------
+       About Me - below contact
+       ----------------------------------------- */
+
+    .about-me-wrapper {
+        display: block;
+
+        width: 100%;
+
+        padding: 0 var(--content-gutter);
+        margin: clamp(4rem, 9vw, 6rem) 0 0;
+    }
+
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    #bio-p1,
+    #bio-p2,
+    #bio-p3 {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0.5rem;
+
+        line-height: 1.6;
+        overflow-wrap: break-word;
+    }
+
+    /* -----------------------------------------
+       Motivation
+       ----------------------------------------- */
+
+    .motivation-wrapper {
+        display: block;
+
+        width: 100%;
+
+        margin: clamp(5rem, 12vw, 8rem) 0 0;
+        padding: 0 var(--content-gutter);
+    }
+
+    #motivation {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    #motivation-p1,
+    #motivation-p2,
+    #motivation-p3 {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0.5rem;
+
+        line-height: 1.6;
+        overflow-wrap: break-word;
+    }
+
+    /* -----------------------------------------
+       Section headings and horizontal lines
+       ----------------------------------------- */
+
+    .hs-title {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 0 3rem;
+        padding: 0 0 0.65rem;
+
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        line-height: 1.2;
+    }
+
+    #bio-title,
+    #motivation-title,
+    #skills-title {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    #bio-title::after,
+    #motivation-title::after,
+    #skills-title::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background:
+            rgba(var(--primary-text-rgb), 0.4);
+    }
+
+    /* -----------------------------------------
+       Skills
+       ----------------------------------------- */
+
+    #skills {
+        width: auto;
+        max-width: none;
+
+        margin: clamp(5rem, 12vw, 8rem)
+                var(--content-gutter) 0;
+
+        padding: 0;
+    }
+
+    .skills-columns {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 3rem 2rem;
+    }
+
+    .skills-column {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .skills-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 0.75rem;
+    }
+
+    .skill {
+        max-width: 100%;
+    }
+
+    /* -----------------------------------------
+       Projects link
+       ----------------------------------------- */
+
+    #external_links {
+        display: flex;
+        justify-content: flex-end;
+
+        width: 100%;
+
+        margin: 5rem 0 0;
+        padding: 0 var(--content-gutter) 3rem;
+    }
+
+    .external_link {
+        margin: 0;
+    }
+}
+
+
+/* =====================================================
+   MOBILE LAYOUT - UP TO 767px
+   Same horizontal navigation, smaller spacing
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    :root {
+        --top-nav-height: 3.25rem;
+        --content-gutter: clamp(1rem, 5vw, 2rem);
+        --fs-h1: clamp(2.6rem, 10vw, 5rem);
+        --fs-body: 0.95rem;
+    }
+
+    header nav,
+    header nav.open,
+    #nav-container.open nav {
+        padding: 0 var(--content-gutter);
+        gap: 0.5rem;
+    }
+
+    #nav-menu {
+        gap: clamp(0.45rem, 2vw, 1rem);
+    }
+
+    .nav_link_home,
+    .nav_link,
+    header nav ul li a {
+        font-size: clamp(0.58rem, 2.2vw, 0.75rem);
+        letter-spacing: 0.04em;
+    }
+
+    .social-list {
+        gap: 0.1rem;
+    }
+
+    .social-list_link {
+        width: 1.65rem;
+        height: 1.8rem;
+    }
+
+    .social-list_link .link-icon {
+        font-size: 0.85rem;
+    }
+
+    #hero {
+        padding-top: 3.5rem;
+    }
+
+    #hero h1 {
+        font-size: var(--fs-h1);
+    }
+
+    #hero h2 {
+        font-size: 1rem;
+    }
+
+    .contact-wrapper {
+        margin-top: 4rem;
+    }
+
+    .about-me-wrapper {
+        margin-top: 4rem;
+    }
+
+    .motivation-wrapper {
+        margin-top: 5rem;
+    }
+
+    #skills {
+        margin-top: 5rem;
+    }
+
+    .skills-columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.75rem;
+    }
+
+    .skills-column:last-child {
+        grid-column: auto;
+    }
+
+    .skills-column h3 {
+        font-size: 1.4rem;
+    }
+
+    .skill i {
+        font-size: 2rem;
+    }
+
+    .skill span {
+        font-size: 0.875rem;
+    }
+
+    #external_links {
+        margin-top: 4rem;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE - UP TO 390px
+   ===================================================== */
+
+@media (max-width: 390px) {
+
+    :root {
+        --content-gutter: 0.75rem;
+        --fs-h1: clamp(2.2rem, 9.5vw, 3.5rem);
+    }
+
+    #nav-menu {
+        gap: 0.4rem;
+    }
+
+    .nav_link_home,
+    .nav_link,
+    header nav ul li a {
+        font-size: 0.58rem;
+        letter-spacing: 0;
+    }
+
+    .social-list_link {
+        width: 1.45rem;
+    }
+
+    .social-list_link .link-icon {
+        font-size: 0.8rem;
+    }
+
+    .skill {
+        gap: 4px;
+        padding: 5px 7px;
+    }
+
+    .skill i {
+        font-size: 1.75rem;
+    }
+
+    .skill svg {
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+}
+
